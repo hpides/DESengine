@@ -1,0 +1,5 @@
+srun -A rabl -p magic -w node-12 -t 5 --mem 40G --cpus-per-task=20 ../tools/java/bin/java -Xms2G -Xmx40G -cp ../program/Desis.jar De.Hpi.Deco.EntryPoint.EntryPointForLocalNode 1 1 1 3
+
+
+
+srun -A rabl -p magic -w node-04 -t 5 --mem 40G --cpus-per-task=20 ../tools/java/bin/java -Xms2G -Xmx40G -cp ../program/Desis.jar De.Hpi.Deco.EntryPoint.EnteryPointForRootnode 1 1 1 3

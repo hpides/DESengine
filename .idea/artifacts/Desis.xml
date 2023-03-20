@@ -1,0 +1,41 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="Desis">
+    <output-path>$USER_HOME$/Desktop</output-path>
+    <root id="archive" name="Desis.jar">
+      <element id="module-output" name="DESengine" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../apache-maven-3.8.4/repository/com/googlecode/json-simple/json-simple/1.1.1/json-simple-1.1.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../apache-maven-3.8.4/repository/com/opencsv/opencsv/5.2/opencsv-5.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../apache-maven-3.8.4/repository/commons-beanutils/commons-beanutils/1.9.4/commons-beanutils-1.9.4.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../apache-maven-3.8.4/repository/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../apache-maven-3.8.4/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../apache-maven-3.8.4/repository/eu/neilalexander/jnacl/1.0.0/jnacl-1.0.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../apache-maven-3.8.4/repository/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../apache-maven-3.8.4/repository/org/apache/commons/commons-lang3/3.10/commons-lang3-3.10.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../apache-maven-3.8.4/repository/org/apache/commons/commons-text/1.8/commons-text-1.8.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../apache-maven-3.8.4/repository/org/javassist/javassist/3.18.1-GA/javassist-3.18.1-GA.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../apache-maven-3.8.4/repository/org/msgpack/msgpack/0.6.12/msgpack-0.6.12.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../apache-maven-3.8.4/repository/org/zeromq/jeromq/0.5.2/jeromq-0.5.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../apache-maven-3.8.4/repository/com/univocity/univocity-parsers/2.9.1/univocity-parsers-2.9.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../apache-maven-3.8.4/repository/com/beust/jcommander/1.78/jcommander-1.78.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../apache-maven-3.8.4/repository/com/google/code/findbugs/jsr305/3.0.1/jsr305-3.0.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../apache-maven-3.8.4/repository/org/slf4j/slf4j-api/1.7.32/slf4j-api-1.7.32.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../apache-maven-3.8.4/repository/org/testng/testng/7.5/testng-7.5.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../apache-maven-3.8.4/repository/org/webjars/jquery/3.5.1/jquery-3.5.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../apache-maven-3.8.4/repository/com/esotericsoftware/kryo/kryo/2.24.0/kryo-2.24.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../apache-maven-3.8.4/repository/com/esotericsoftware/minlog/minlog/1.2/minlog-1.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../apache-maven-3.8.4/repository/org/apache/commons/commons-compress/1.18/commons-compress-1.18.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../apache-maven-3.8.4/repository/org/apache/flink/flink-annotations/1.8.0/flink-annotations-1.8.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../apache-maven-3.8.4/repository/org/apache/flink/flink-core/1.8.0/flink-core-1.8.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../apache-maven-3.8.4/repository/org/apache/flink/flink-metrics-core/1.8.0/flink-metrics-core-1.8.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../apache-maven-3.8.4/repository/org/apache/flink/flink-shaded-asm/5.0.4-6.0/flink-shaded-asm-5.0.4-6.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../apache-maven-3.8.4/repository/org/apache/flink/flink-shaded-guava/18.0-6.0/flink-shaded-guava-18.0-6.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../apache-maven-3.8.4/repository/org/apache/flink/force-shading/1.8.0/force-shading-1.8.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../apache-maven-3.8.4/repository/org/objenesis/objenesis/2.1/objenesis-2.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../apache-maven-3.8.4/repository/org/slf4j/slf4j-api/1.7.16/slf4j-api-1.7.16.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../apache-maven-3.8.4/repository/com/github/lawben/scotty-window-processor/core/c79d84e1cf0141df7f47beff1208161cce7d2601/core-c79d84e1cf0141df7f47beff1208161cce7d2601.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../apache-maven-3.8.4/repository/com/github/lawben/scotty-window-processor/slicing/c79d84e1cf0141df7f47beff1208161cce7d2601/slicing-c79d84e1cf0141df7f47beff1208161cce7d2601.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../apache-maven-3.8.4/repository/com/github/lawben/scotty-window-processor/state/c79d84e1cf0141df7f47beff1208161cce7d2601/state-c79d84e1cf0141df7f47beff1208161cce7d2601.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../apache-maven-3.8.4/repository/org/jetbrains/annotations/23.0.0/annotations-23.0.0.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

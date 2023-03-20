@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Main-Class: De.Hpi.Desis.Test.TestGenerator
+Class-Path: javassist-3.18.1-GA.jar commons-collections4-4.4.jar jnacl-1
+ .0.0.jar commons-logging-1.2.jar jeromq-0.5.2.jar commons-lang3-3.10.ja
+ r commons-beanutils-1.9.4.jar commons-text-1.8.jar msgpack-0.6.12.jar c
+ ommons-collections-3.2.2.jar json-simple-1.1.1.jar opencsv-5.2.jar
+

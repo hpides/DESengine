@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="857ef140-6a94-4b5e-ac19-bcc9a070667f" name="Changes" comment="Deco" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="E:\apache-maven-3.8.4\repository" />
+        <option name="mavenHome" value="$PROJECT_DIR$/../apache-maven-3.8.4" />
+        <option name="userSettingsFile" value="E:\apache-maven-3.8.4\settings.xml.txt" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="26wBd0mTKww8ZRqedOxi9qX7Q2p" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/De/Hpi/Deco" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\project\src\main\java\De\Hpi\Deco" />
+      <recent name="E:\project\src\main\java\De\Hpi\DesisSW\Generator" />
+      <recent name="E:\project\src\main\java\De\Hpi\DesisCen\Generator" />
+      <recent name="E:\project\src\main\java\De\Hpi\DesisIC\Generator" />
+      <recent name="E:\project\src\main\java\De\Hpi\DesisQuantile" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\project\results\DesisResults" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="De.Hpi.DesisCen.Generator" />
+      <recent name="De.Hpi.DesisIC.Generator" />
+      <recent name="De.Hpi.DesisSW.Generator" />
+      <recent name="De.Hpi.DesisIC.Configure" />
+      <recent name="De.Hpi.DesisSW.Configure" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.OverallMainDriverTest">
+    <configuration name="CSVReadingNoGeneratorByKey" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="De.Hpi.Scotty.CSVReadingNoGeneratorByKey" />
+      <module name="DESengine" />
+      <option name="PROGRAM_PARAMETERS" value="1 1000" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="De.Hpi.Scotty.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OverallMainDriverTest (4)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="De.Hpi.DesisMultipleKeys.Test.OverallMainDriverTest" />
+      <module name="DESengine" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="De.Hpi.DesisMultipleKeys.Test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OverallMainDriverTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="De.Hpi.Deco.Test.OverallMainDriverTest" />
+      <module name="DESengine" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="De.Hpi.Deco.Test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RandomTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="De.Hpi.Desis.Test.RandomTest" />
+      <module name="DESengine" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="De.Hpi.Desis.Test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestDisco" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="De.Hpi.Disco.TestDisco" />
+      <module name="DESengine" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="De.Hpi.Disco.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.OverallMainDriverTest (4)" />
+      <item itemvalue="Application.TestDisco" />
+      <item itemvalue="Application.CSVReadingNoGeneratorByKey" />
+      <item itemvalue="Application.RandomTest" />
+      <item itemvalue="Application.OverallMainDriverTest" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.OverallMainDriverTest" />
+        <item itemvalue="Application.RandomTest" />
+        <item itemvalue="Application.CSVReadingNoGeneratorByKey" />
+        <item itemvalue="Application.OverallMainDriverTest (4)" />
+        <item itemvalue="Application.TestDisco" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="857ef140-6a94-4b5e-ac19-bcc9a070667f" name="Changes" comment="" />
+      <created>1648324852412</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1648324852412</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Refactor">
+      <created>1648634122977</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1648634122977</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Refactor">
+      <created>1648634166983</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1648634166983</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Refactor">
+      <created>1648634181077</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1648634181077</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Refactor">
+      <created>1648680769645</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1648680769645</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Refactor">
+      <created>1648680775487</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1648680775487</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Refactor">
+      <created>1648684306576</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1648684306576</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Refactor">
+      <created>1648733881035</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1648733881035</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Refactor">
+      <created>1648751902144</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1648751902144</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Refactor">
+      <created>1648767445552</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1648767445552</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Refactor">
+      <created>1648767463346</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1648767463346</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Refactor">
+      <created>1648768173441</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1648768173441</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Refactor">
+      <created>1648770131265</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1648770131265</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Refactor">
+      <created>1648788755964</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1648788755964</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Refactor">
+      <created>1648788891867</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1648788891867</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Refactor">
+      <created>1649285111314</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1649285111314</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Refactor">
+      <created>1649285117923</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1649285117923</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Refactor">
+      <created>1649285125908</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1649285125908</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Refactor">
+      <created>1649331369668</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1649331369668</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Refactor">
+      <created>1649332080533</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1649332080533</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Refactor">
+      <created>1649422000932</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1649422000932</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Refactor">
+      <created>1650321976955</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1650321976955</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Refactor">
+      <created>1650321983592</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1650321983592</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Refactor">
+      <created>1650322096171</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1650322096171</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Refactor">
+      <created>1650322098921</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1650322098921</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Refactor">
+      <created>1650322100527</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1650322100527</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Refactor">
+      <created>1650322103156</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1650322103156</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Refactor">
+      <created>1650322201698</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1650322201698</updated>
+    </task>
+    <task id="LOCAL-00035" summary="central BaselineCentraComputation">
+      <created>1650400109605</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1650400109605</updated>
+    </task>
+    <task id="LOCAL-00036" summary="central BaselineCentraComputation">
+      <created>1650400206002</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1650400206002</updated>
+    </task>
+    <task id="LOCAL-00037" summary="central BaselineCentraComputation">
+      <created>1650400263839</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1650400263839</updated>
+    </task>
+    <task id="LOCAL-00038" summary="central BaselineCentraComputation">
+      <created>1650406498740</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1650406498740</updated>
+    </task>
+    <task id="LOCAL-00039" summary="central BaselineCentraComputation">
+      <created>1650408028945</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1650408028945</updated>
+    </task>
+    <task id="LOCAL-00040" summary="new baseline">
+      <created>1650499219257</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1650499219257</updated>
+    </task>
+    <task id="LOCAL-00041" summary="new baseline">
+      <created>1650499236711</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1650499236711</updated>
+    </task>
+    <task id="LOCAL-00042" summary="new baseline">
+      <created>1650858257999</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1650858257999</updated>
+    </task>
+    <task id="LOCAL-00043" summary="new baseline">
+      <created>1650858310016</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1650858310016</updated>
+    </task>
+    <task id="LOCAL-00044" summary="new baseline">
+      <created>1650858317596</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1650858317596</updated>
+    </task>
+    <task id="LOCAL-00045" summary="new baseline">
+      <created>1650924980869</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1650924980869</updated>
+    </task>
+    <task id="LOCAL-00046" summary="new baseline">
+      <created>1650925017972</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1650925017972</updated>
+    </task>
+    <task id="LOCAL-00047" summary="new baseline">
+      <created>1650999010936</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1650999010936</updated>
+    </task>
+    <task id="LOCAL-00048" summary="new baseline">
+      <created>1651013946037</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1651013946037</updated>
+    </task>
+    <task id="LOCAL-00049" summary="new baseline">
+      <created>1651453796053</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1651453796053</updated>
+    </task>
+    <task id="LOCAL-00050" summary="exp">
+      <created>1651454251652</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1651454251652</updated>
+    </task>
+    <task id="LOCAL-00051" summary="exp">
+      <created>1652042461457</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1652042461457</updated>
+    </task>
+    <task id="LOCAL-00052" summary="exp">
+      <created>1653426065752</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1653426065752</updated>
+    </task>
+    <task id="LOCAL-00053" summary="exp">
+      <created>1653426139021</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1653426139021</updated>
+    </task>
+    <task id="LOCAL-00054" summary="exp">
+      <created>1653928653543</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1653928653543</updated>
+    </task>
+    <task id="LOCAL-00055" summary="Deco">
+      <created>1663672869564</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1663672869564</updated>
+    </task>
+    <task id="LOCAL-00056" summary="Deco">
+      <created>1663991332164</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1663991332164</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/DesisFigures" />
+    </ignored-roots>
+    <MESSAGE value="Test" />
+    <MESSAGE value="Optimize Median" />
+    <MESSAGE value="Refactor" />
+    <MESSAGE value="central baseline" />
+    <MESSAGE value="central BaselineCentraComputation" />
+    <MESSAGE value="new baseline" />
+    <MESSAGE value="exp" />
+    <MESSAGE value="Deco" />
+    <option name="LAST_COMMIT_MESSAGE" value="Deco" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/DESengine$OverallMainDriverTest.ic" NAME="OverallMainDriverTest Coverage Results" MODIFIED="1648749838832" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>De.Hpi.Desis.Test.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/DESengine$OverallMainDriverTestCen.ic" NAME="OverallMainDriverTestCen Coverage Results" MODIFIED="1650848376624" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>De.Hpi.DesisCen.Test.*</FILTER>
+    </SUITE>
+  </component>
+</project>

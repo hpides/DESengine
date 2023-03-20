@@ -1,0 +1,60 @@
+i11scp C:\Users\ibrahim\Desktop\Desis.jar wang.yue@summon.delab.i.hpi.de:/hpi/fs00/home/wang.yue/
+
+/hpi/fs00/home/wang.yue/data 
+
+C:\Users\ibrahim\Desktop\Desis.jar
+
+srun -A rabl -p magic -w node-08 --mem 40G --cpus-per-task=20 tools/java/bin/java -Xms2096M -Xmx40240M -cp Desis.jar De.Hpi.Desis.EntryPoint.EnteryPointForRootnode 1 1
+
+srun -A rabl -p magic -w node-02 --mem 40G --cpus-per-task=20 tools/java/bin/java -Xms2096M -Xmx40240M -cp Desis.jar De.Hpi.Desis.EntryPoint.EnteryPointForIntermediaNode 1 1
+
+srun -A rabl -p magic -w node-03 --mem 40G --cpus-per-task=20 tools/java/bin/java -Xms2096M -Xmx40240M -cp Desis.jar De.Hpi.Desis.EntryPoint.EnteryPointForIntermediaNode 2 1
+
+srun -A rabl -p magic -w node-04 --mem 50G --cpus-per-task=20 tools/java/bin/java -Xms20096M -Xmx50960M -cp Desis.jar De.Hpi.Desis.EntryPoint.EntryPointForLocalNode 1 1
+srun -A rabl -p magic -w node-05 --mem 50G --cpus-per-task=20 tools/java/bin/java -Xms20096M -Xmx50960M -cp Desis.jar De.Hpi.Desis.EntryPoint.EntryPointForLocalNode 2 1
+srun -A rabl -p magic -w node-06 --mem 50G --cpus-per-task=20 tools/java/bin/java -Xms20096M -Xmx50960M -cp Desis.jar De.Hpi.Desis.EntryPoint.EntryPointForLocalNode 3 1
+srun -A rabl -p magic -w node-07 --mem 50G --cpus-per-task=20 tools/java/bin/java -Xms20096M -Xmx50960M -cp Desis.jar De.Hpi.Desis.EntryPoint.EntryPointForLocalNode 4 1
+
+srun -A rabl -p magic --mem 40G -w node-02 --cpus-per-task=30 tools/java/bin/java -Xms4096M -Xmx40960M -cp Desis.jar De.Hpi.Desis.Test.TestGenerator 2 1000000000
+
+srun -A rabl -p magic --mem 40G -w node-01 --cpus-per-task=20 tools/java/bin/java -Xms4096M -Xmx40960M -cp Desis.jar De.Hpi.Desis.Test.splitTheSourceData
+
+
+//DesisSW
+srun -A rabl -p magic -w node-08 --mem 40G --cpus-per-task=20 tools/java/bin/java -Xms2G -Xmx40G -cp Desis.jar De.Hpi.DesisSW.EntryPoint.EnteryPointForRootnode 1 1
+
+srun -A rabl -p magic -w node-02 --mem 40G --cpus-per-task=20 tools/java/bin/java -Xms2G -Xmx40G -cp Desis.jar De.Hpi.DesisSW.EntryPoint.EnteryPointForIntermediaNode 1 1
+
+srun -A rabl -p magic -w node-03 --mem 40G --cpus-per-task=20 tools/java/bin/java -Xms2G -Xmx40G -cp Desis.jar De.Hpi.DesisSW.EntryPoint.EnteryPointForIntermediaNode 2 1
+
+srun -A rabl -p magic -w node-04 --mem 40G --cpus-per-task=20 tools/java/bin/java -Xms2G -Xmx40G -cp Desis.jar De.Hpi.DesisSW.EntryPoint.EntryPointForLocalNode 1 1
+srun -A rabl -p magic -w node-05 --mem 40G --cpus-per-task=20 tools/java/bin/java -Xms2G -Xmx40G -cp Desis.jar De.Hpi.DesisSW.EntryPoint.EntryPointForLocalNode 2 1
+srun -A rabl -p magic -w node-06 --mem 40G --cpus-per-task=20 tools/java/bin/java -Xms2G -Xmx40G -cp Desis.jar De.Hpi.DesisSW.EntryPoint.EntryPointForLocalNode 3 1
+srun -A rabl -p magic -w node-07 --mem 40G --cpus-per-task=20 tools/java/bin/java -Xms2G -Xmx40G -cp Desis.jar De.Hpi.DesisSW.EntryPoint.EntryPointForLocalNode 4 1
+
+
+//Scotty
+srun -A rabl -p magic --mem 40G -w node-01 --cpus-per-task=20 tools/java/bin/java -Xms4096M -Xmx40960M -cp Desis.jar De.Hpi.Scotty.CSVReading 0
+
+srun -A rabl -p magic --mem 40G -w node-01 --cpus-per-task=20 tools/java/bin/java -Xms4096M -Xmx40960M -cp Desis.jar De.Hpi.Scotty.CSVReadingQuantile
+
+//DesisCen
+srun -A rabl -p magic -w node-08 --mem 20G --cpus-per-task=20 tools/java/bin/java -Xms2096M -Xmx20240M -cp Desis.jar De.Hpi.DesisCen.EntryPoint.EnteryPointForRootnode 1 0
+
+srun -A rabl -p magic -w node-04 --mem 40G --cpus-per-task=30 tools/java/bin/java -Xms4096M -Xmx40960M -cp Desis.jar De.Hpi.DesisCen.EntryPoint.EntryPointForLocalNode 1 0
+srun -A rabl -p magic -w node-05 --mem 40G --cpus-per-task=30 tools/java/bin/java -Xms4096M -Xmx40960M -cp Desis.jar De.Hpi.DesisCen.EntryPoint.EntryPointForLocalNode 2 0
+srun -A rabl -p magic -w node-06 --mem 40G --cpus-per-task=30 tools/java/bin/java -Xms4096M -Xmx40960M -cp Desis.jar De.Hpi.DesisCen.EntryPoint.EntryPointForLocalNode 3 0
+srun -A rabl -p magic -w node-07 --mem 40G --cpus-per-task=30 tools/java/bin/java -Xms4096M -Xmx40960M -cp Desis.jar De.Hpi.DesisCen.EntryPoint.EntryPointForLocalNode 4 0
+
+//Disco
+srun -A rabl -p magic -w node-08 --mem 10G --cpus-per-task=20 tools/java/bin/java -Xms2096M -Xmx10240M -cp Desis.jar De.Hpi.Disco.Source.executables.DistributedRootMain 10 50010 50020 "/hpi/fs00/home/wang.yue/data/result" 10 1
+
+srun -A rabl -p magic -w node-02 --mem 10G --cpus-per-task=20 tools/java/bin/java -Xms2096M -Xmx10240M -cp Desis.jar De.Hpi.Disco.Source.executables.DistributedMergeNodeMain node-08 50010 50020 40010 40020 2 1
+
+srun -A rabl -p magic -w node-03 --mem 10G --cpus-per-task=20 tools/java/bin/java -Xms2096M -Xmx10240M -cp Desis.jar De.Hpi.Disco.Source.executables.DistributedMergeNodeMain node-08 50010 50020 40030 40040 1 2
+
+srun -A rabl -p magic -w node-04 --mem 10G --cpus-per-task=20 tools/java/bin/java -Xms2096M -Xmx10240M -cp Desis.jar De.Hpi.Disco.Source.executables.DistributedChildMain node-02 40010 40020 30010 1 1
+srun -A rabl -p magic -w node-05 --mem 10G --cpus-per-task=20 tools/java/bin/java -Xms2096M -Xmx10240M -cp Desis.jar De.Hpi.Disco.Source.executables.DistributedChildMain node-02 40010 40020 30010 2 1
+
+srun -A rabl -p magic -w node-06 --mem 10G --cpus-per-task=20 tools/java/bin/java -Xms2096M -Xmx10240M -cp Desis.jar De.Hpi.Disco.Source.executables.DistributedChildMain node-03 40010 40030 40040 3 1
+srun -A rabl -p magic -w node-07 --mem 10G --cpus-per-task=20 tools/java/bin/java -Xms2096M -Xmx10240M -cp Desis.jar De.Hpi.Disco.Source.executables.DistributedChildMain node-03 40010 40030 40040 4 1
