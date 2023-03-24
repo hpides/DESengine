@@ -29,9 +29,9 @@ Desis is a hierarchical system that can be deployed into decentralized networks.
 
 - **Requirements**: Java 8+
 - **Install**
- 1. Download DESengine
- 2. Compile Project
- 3. Set `WINDOWS = true` in `Configuration.java`
- 4. Run OverallMainDriverTest.java
+     1. Download DESengine
+     2. Compile Project
+     3. Set `WINDOWS = true` in `Configuration.java`
+     4. Run OverallMainDriverTest.java
 
 
