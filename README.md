@@ -27,6 +27,8 @@ Deco is also a decentralized approach that is based on Desis. Deco can move calc
     - the same as Desis and supports windows with different distinct keys
 - DesisQuantile
     - the same as Desis and supports different quantile functions
+- FigureScripts
+  - the python scripts that draw experiments plots
     
     
 # Installation
