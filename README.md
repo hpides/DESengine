@@ -4,6 +4,10 @@
 
 Desis is a hierarchical system that can be deployed into decentralized networks. Desis support tumbling windows, sliding windows, session windows, and user-defined windows.
 
+# Desis
+
+Deco is also a decentralized approach that is based on Desis. Deco can move calcuations of count-based windows from centers to the local nodes.
+
 # Approach names:
 - Desis
     - decentralized aggregation and share results between windows
