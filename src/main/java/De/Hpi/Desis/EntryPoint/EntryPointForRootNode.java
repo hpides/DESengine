@@ -3,7 +3,7 @@ package De.Hpi.Desis.EntryPoint;
 import De.Hpi.Desis.Configure.Configuration;
 import De.Hpi.Desis.RootNode.RootNode;
 
-public class EnteryPointForRootnode {
+public class EntryPointForRootNode {
 
     public static void main(String[] args)
     {

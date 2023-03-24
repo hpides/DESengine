@@ -3,7 +3,7 @@ package De.Hpi.Desis.EntryPoint;
 import De.Hpi.Desis.Configure.Configuration;
 import De.Hpi.Desis.IntermediaNode.IntermediaNode;
 
-public class EnteryPointForIntermediaNode {
+public class EntryPointForIntermediaNode {
     public static void main(String[] args) {
         Configuration conf = new Configuration();
         int queryNumber = conf.queryNumber;

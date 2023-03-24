@@ -4,7 +4,7 @@ i11scp C:\Users\ibrahim\Desktop\Desis.jar wang.yue@summon.delab.i.hpi.de:/hpi/fs
 
 C:\Users\ibrahim\Desktop\Desis.jar
 
-srun -A rabl -p magic -w node-08 --mem 40G --cpus-per-task=20 tools/java/bin/java -Xms2096M -Xmx40240M -cp Desis.jar De.Hpi.Desis.EntryPoint.EnteryPointForRootnode 1 1
+srun -A rabl -p magic -w node-08 --mem 40G --cpus-per-task=20 tools/java/bin/java -Xms2096M -Xmx40240M -cp Desis.jar De.Hpi.Desis.EntryPoint.EntryPointForRootNode 1 1
 
 srun -A rabl -p magic -w node-02 --mem 40G --cpus-per-task=20 tools/java/bin/java -Xms2096M -Xmx40240M -cp Desis.jar De.Hpi.Desis.EntryPoint.EnteryPointForIntermediaNode 1 1
 

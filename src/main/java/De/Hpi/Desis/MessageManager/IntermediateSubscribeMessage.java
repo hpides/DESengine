@@ -38,6 +38,10 @@ public class IntermediateSubscribeMessage implements Runnable{
         long begintime = System.currentTimeMillis();
         long endtime = System.currentTimeMillis();
 
+        //to test network latency
+//        long counterL = 0l;
+//        long networklatency = 0l;
+
         while (true) {
             try {
                 if(resultQueueFromLocal.size() < conf.DATAGENERATORMAXIMIUMBUFFER) {
@@ -45,6 +49,9 @@ public class IntermediateSubscribeMessage implements Runnable{
                     if(raw!=null) {
                         MessageResult messageResult = msgpack.read(raw,
                                 MessageResult.class);
+//                        counterL++;
+//                        networklatency += (System.currentTimeMillis() - messageResult.windowCollection.windowList.get(0).count);
+                        //to test network latency
                         resultQueueFromLocal.offer(messageResult.windowCollection);
                         if(conf.DEBUGMODE_INTER) {
                             if(tupleCounter == 0){
@@ -72,6 +79,8 @@ public class IntermediateSubscribeMessage implements Runnable{
                                         + "  GCTime:  " + getGarbageCollectionTime()
                                         + "  GC/Time-Ratio:  " + (double) getGarbageCollectionTime() / (endtime - begintime)
                                         + "  Queue:  " + resultQueueFromLocal.size()
+//                                        + "  NetworkLatency:  " + (System.currentTimeMillis() - messageResult.windowCollection.windowList.get(0).count)
+//                                        + "  AverageNetworkLatency:  " + networklatency/counterL
                                 );
                                 counter = tupleCounter;
                             }

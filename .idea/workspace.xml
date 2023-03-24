@@ -6,7 +6,30 @@
   <component name="ChangeListManager">
     <list default="true" id="857ef140-6a94-4b5e-ac19-bcc9a070667f" name="Changes" comment="Readme">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/commend.txt" beforeDir="false" afterPath="$PROJECT_DIR$/results/commend.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/De/Hpi/Desis/Configure/Configuration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/De/Hpi/Desis/Configure/Configuration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/De/Hpi/Desis/EntryPoint/EnteryPointForIntermediaNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/De/Hpi/Desis/EntryPoint/EntryPointForIntermediaNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/De/Hpi/Desis/EntryPoint/EnteryPointForRootnode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/De/Hpi/Desis/EntryPoint/EntryPointForRootNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/De/Hpi/Desis/Generator/QueryGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/De/Hpi/Desis/Generator/QueryGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/De/Hpi/Desis/MessageManager/IntermediateSubscribeMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/De/Hpi/Desis/MessageManager/IntermediateSubscribeMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/De/Hpi/Desis/MessageManager/LocalPublishMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/De/Hpi/Desis/MessageManager/LocalPublishMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/De/Hpi/Desis/Test/OverallMainDriverTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/De/Hpi/Desis/Test/OverallMainDriverTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/De/Hpi/Deco/Configure/Configuration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/De/Hpi/Deco/Configure/Configuration.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/De/Hpi/Desis/EntryPoint/EnteryPointForIntermediaNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/De/Hpi/Desis/EntryPoint/EnteryPointForRootnode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/De/Hpi/Desis/LocalNode/LocalNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/De/Hpi/Desis/LocalNode/LocalNode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/De/Hpi/Desis/LocalNode/Optimizer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/De/Hpi/Desis/LocalNode/Optimizer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/De/Hpi/Desis/MessageManager/IntermediateSubscribeMessage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/De/Hpi/Desis/MessageManager/IntermediateSubscribeMessage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/De/Hpi/Desis/MessageManager/LocalPublishMessage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/De/Hpi/Desis/MessageManager/LocalPublishMessage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/De/Hpi/Desis/Test/OverallMainDriverTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/De/Hpi/Desis/Test/OverallMainDriverTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/De/Hpi/Disco/Source/executables/DistributedChildMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/De/Hpi/Disco/Source/executables/DistributedChildMain.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/De/Hpi/Disco/Source/executables/DistributedMergeNodeMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/De/Hpi/Disco/Source/executables/DistributedMergeNodeMain.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/De/Hpi/Disco/Source/executables/DistributedRootMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/De/Hpi/Disco/Source/executables/DistributedRootMain.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/De/Hpi/Disco/Source/utility/DistributedChild.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/De/Hpi/Disco/Source/utility/DistributedChild.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/De/Hpi/Disco/generator/InputStream.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/De/Hpi/Disco/generator/InputStream.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/De/Hpi/Disco/generator/LocalParseAddress.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/De/Hpi/Disco/generator/LocalParseAddress.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/MANIFEST.MF" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -180,13 +203,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1648324852412</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Refactor">
-      <created>1648634181077</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1648634181077</updated>
     </task>
     <task id="LOCAL-00011" summary="Refactor">
       <created>1648680769645</created>
@@ -524,7 +540,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679668528040</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="Readme">
+      <created>1679669934679</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1679669934679</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

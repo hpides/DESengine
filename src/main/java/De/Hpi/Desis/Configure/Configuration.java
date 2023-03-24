@@ -5,7 +5,7 @@ public class Configuration implements ConfigurationTopology, ConfigurationWindow
         , ConfigurationBenchmark{
 
     //how many query we would simulate
-    public int queryNumber = 2;
+    public int queryNumber = 1;
     //to make program easy
     // in optimizer system start to process only when "queryNumber" queries in system,
     // and querywait is to block loops

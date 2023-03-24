@@ -28,15 +28,15 @@ public class QueryGenerator {
             //totally 20 queries
             //object, function, windowType, range, slide, startPunctuation, endPunctuation, warterMark, Batch size.
 
-//                initializeQuery(Configuration.SPEED,Configuration.AVERAGE,Configuration.COUNTBASED,
-//                        10000*conf.queryModes, 1000, 0, 1000, 0, 0,0.5);
+                initializeQuery(Configuration.SPEED,Configuration.AVERAGE,Configuration.TUMBING,
+                        1000, 1000, 0, 1000, 0, 0,0.5);
 //                initializeQuery(Configuration.SPEED,Configuration.AVERAGE,Configuration.COUNTBASED,
 //                        10000, 1000, 0, 1000, 0, 0,0.5);
 
-            for(int i = 0; i <= 1000; i++){
-                initializeQuery(Configuration.SPEED,Configuration.AVERAGE,Configuration.TUMBING,
-                        1000*(i%10 + 1), 1000, 0, 1000, 0, 0,(i%999 + 1) / 1000.0);
-            }
+//            for(int i = 0; i <= 1000; i++){
+//                initializeQuery(Configuration.SPEED,Configuration.AVERAGE,Configuration.TUMBING,
+//                        1000*(i%10 + 1), 1000, 0, 1000, 0, 0,(i%999 + 1) / 1000.0);
+//            }
 
 //            initializeQuery(Configuration.SPEED,Configuration.AVERAGE,Configuration.TUMBING,
 //                    1000, 1000, 0, 1000, 0, 0,0.5);

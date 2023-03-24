@@ -46,13 +46,16 @@ public class LocalPublishMessage implements Runnable{
                 //the message type now it the data
                 MessageResult messageResult = new MessageResult();
                 messageResult.setNodeId(conf.getNodeId());
-                messageResult.setMessageType(conf.MESSAGERESULT);
+//                messageResult.setMessageType(conf.MESSAGERESULT);
                 messageResult.setMessageLevel(conf.LOCALNODEMESSAGE);
                 messageResult.windowCollection = windowCollection;
                 try {
+                    //to test network latency
+//                    messageResult.windowCollection.windowList.get(0).count = System.currentTimeMillis();
+
                     byte[] raw = msgpack.write(messageResult);
 //                    for(int i = 0; i < conf.queryModes; i++)
-//                    socketPub.send(raw);
+                    socketPub.send(raw);
                     if(messageResult.windowCollection.tuples == null)
                         messageResult.windowCollection.tuples = new ArrayList<>();
                     if(conf.DEBUGMODE_LOCAL) {
@@ -73,6 +76,7 @@ public class LocalPublishMessage implements Runnable{
                                         + "  Queue:  " + intermediateResultQueue.size()
 //                                        + "  Latency:  " + latencyAll / latencyCounter
                                         + "  Slices:  " + infoAll / infoCounter
+//                                        + "  NetworkLatency:  " + messageResult.windowCollection.windowList.get(0).count
 //                                        + "  Throughput:  " + messageResult.window.tupleCounter / ((endtime - begintime) / 1000.0)
 //                                        + "  NetworkOverhead:  " + networkOverhead
 //                                        + "  Allcounter:  " + messageResult.window.tupleCounter
