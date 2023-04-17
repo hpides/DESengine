@@ -4,7 +4,7 @@
 
 Desis is a hierarchical system that can be deployed into decentralized networks. Desis support tumbling windows, sliding windows, session windows, and user-defined windows.
 
-# Desis
+# Deco
 
 Deco is also a decentralized approach that is based on Desis. Deco can move calcuations of count-based windows from centers to the local nodes.
 
@@ -17,11 +17,11 @@ Deco is also a decentralized approach that is based on Desis. Deco can move calc
     - implemented by the `Scotty`
 - Disco 
     - implemented by the `Disco`
-- DesisCen
+- DesisCen(DeCen)
     - centralized aggregation and can not perform incremental aggregation.
-- DesisIC
+- DesisIC(DeBuket)
     - implemented based on Desis and only can perform incremental aggregation
-- DesisSW
+- DesisSW(DeSW)
     - implemented based on Desis and can partial results between windows have different window types
 - DesisMultipleKeys
     - the same as Desis and supports windows with different distinct keys
@@ -40,4 +40,24 @@ Deco is also a decentralized approach that is based on Desis. Deco can move calc
      3. Set `WINDOWS = true` in `Configuration.java`
      4. Run OverallMainDriverTest.java
 
+# Input
 
+- Desis
+  - Node Id: 
+    - The id of the node that is deployed with Desis.
+  - Query Number: 
+    - How many queries are processed simultaneously.
+  - Query Modes: 
+    - The query mode is to choose the query patter that is set into query generation file.
+  - Generator Thread Number: 
+    - How many generator threads are initialized. One thread can produce at least 10 million tuples/s.
+
+- Deco
+  - Node Id:
+    - The id of the node that is deployed with Desis.
+  - Query Number:
+    - How many queries are processed simultaneously.
+  - Query Modes:
+    - The query mode is to choose the query patter that is set into query generation file.
+  - Generator Thread Number:
+    - How many generator threads are initialized. One thread can produce at least 10 million tuples/s.
