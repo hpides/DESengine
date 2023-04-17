@@ -6,17 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="857ef140-6a94-4b5e-ac19-bcc9a070667f" name="Changes" comment="Test Raspberry Pi">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/De/Hpi/Disco/Source/executables/DistributedRootMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/De/Hpi/Disco/Source/executables/DistributedRootMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/De/Hpi/Disco/generator/Configuration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/De/Hpi/Disco/generator/Configuration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/De/Hpi/Disco/generator/DataGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/De/Hpi/Disco/generator/DataGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/De/Hpi/Disco/generator/DataGeneratorSimu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/De/Hpi/Disco/generator/DataGeneratorSimu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/De/Hpi/Disco/generator/InputStream.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/De/Hpi/Disco/generator/InputStream.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/De/Hpi/Disco/generator/LocalParseAddress.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/De/Hpi/Disco/generator/LocalParseAddress.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/De/Hpi/Disco/generator/UniVocityCSVReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/De/Hpi/Disco/generator/UniVocityCSVReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/De/Hpi/Scotty/CSVReadingBad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/De/Hpi/Scotty/CSVReadingBad.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/De/Hpi/Scotty/CSVReadingNoGeneratorByKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/De/Hpi/Scotty/CSVReadingNoGeneratorByKey.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/De/Hpi/Scotty/Configure/Configuration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/De/Hpi/Scotty/Configure/Configuration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/De/Hpi/Scotty/Generator/DataGeneratorBad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/De/Hpi/Scotty/Generator/DataGeneratorBad.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -207,20 +196,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1648324852412</updated>
-    </task>
-    <task id="LOCAL-00014" summary="Refactor">
-      <created>1648733881035</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1648733881035</updated>
-    </task>
-    <task id="LOCAL-00015" summary="Refactor">
-      <created>1648751902144</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1648751902144</updated>
     </task>
     <task id="LOCAL-00016" summary="Refactor">
       <created>1648767445552</created>
@@ -551,7 +526,21 @@
       <option name="project" value="LOCAL" />
       <updated>1681731912096</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="Test Raspberry Pi">
+      <created>1681734369266</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1681734369266</updated>
+    </task>
+    <task id="LOCAL-00064" summary="Test Raspberry Pi">
+      <created>1681734429883</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1681734429883</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
