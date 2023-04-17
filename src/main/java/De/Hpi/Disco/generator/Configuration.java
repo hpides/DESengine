@@ -1,9 +1,9 @@
 package De.Hpi.Disco.generator;
 
-import De.Hpi.Desis.Configure.ConfigurationMessage;
-import De.Hpi.Desis.Configure.ConfigurationProcessing;
-import De.Hpi.Desis.Configure.ConfigurationTopology;
-import De.Hpi.Desis.Configure.ConfigurationWindow;
+import De.Hpi.DesisAll.Desis.Configure.ConfigurationMessage;
+import De.Hpi.DesisAll.Desis.Configure.ConfigurationProcessing;
+import De.Hpi.DesisAll.Desis.Configure.ConfigurationTopology;
+import De.Hpi.DesisAll.Desis.Configure.ConfigurationWindow;
 
 public class Configuration implements ConfigurationTopology, ConfigurationWindow,
         ConfigurationProcessing, ConfigurationGenerator, ConfigurationMessage

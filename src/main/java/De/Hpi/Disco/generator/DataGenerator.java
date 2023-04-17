@@ -1,8 +1,5 @@
 package De.Hpi.Disco.generator;
 
-import De.Hpi.Disco.generator.Configuration;
-import De.Hpi.Disco.generator.DesisTuple;
-
 import java.util.ArrayList;
 import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.atomic.AtomicLong;

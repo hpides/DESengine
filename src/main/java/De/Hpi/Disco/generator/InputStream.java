@@ -1,9 +1,5 @@
 package De.Hpi.Disco.generator;
 
-import De.Hpi.Disco.generator.Configuration;
-import De.Hpi.Disco.generator.DesisTuple;
-import De.Hpi.Disco.generator.DataGeneratorSimu;
-
 import java.lang.management.GarbageCollectorMXBean;
 import java.lang.management.ManagementFactory;
 import java.util.ArrayList;

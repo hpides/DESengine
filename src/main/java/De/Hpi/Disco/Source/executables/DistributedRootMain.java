@@ -3,7 +3,6 @@ package De.Hpi.Disco.Source.executables;
 import De.Hpi.Disco.generator.Configuration;
 import De.Hpi.Disco.Source.utility.ResultListener;
 import De.Hpi.Disco.Source.utility.DistributedRoot;
-import De.Hpi.Disco.generator.DesisTuple;
 
 public class DistributedRootMain {
     public static void main(String[] args) {

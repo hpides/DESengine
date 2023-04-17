@@ -1,7 +1,6 @@
 package De.Hpi.Disco.generator;
 
 
-import De.Hpi.Disco.generator.ConfigurationGenerator;
 import com.univocity.parsers.csv.CsvParser;
 import com.univocity.parsers.csv.CsvParserSettings;
 

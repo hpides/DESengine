@@ -1,8 +1,6 @@
 package De.Hpi.Disco.generator;
 
 
-import De.Hpi.Disco.generator.Configuration;
-
 public class LocalParseAddress {
 
     public static String getFilePath(Configuration configurationGenerator, int nodeId){

@@ -3,7 +3,6 @@ package De.Hpi.Scotty.Generator;
 import De.Hpi.Scotty.Configure.Configuration;
 import De.Hpi.Scotty.DesisTuple;
 
-import java.util.ArrayList;
 import java.util.Random;
 import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.atomic.AtomicLong;

@@ -1,8 +1,6 @@
 package De.Hpi.Scotty;
 
-import De.Hpi.Desis.Dao.Tuple;
 import De.Hpi.Scotty.Configure.Configuration;
-import De.Hpi.Scotty.Generator.InputStream;
 import De.Hpi.Scotty.Generator.InputStreamBad;
 import De.Hpi.Scotty.source.slicing.SlicingWindowOperator;
 
