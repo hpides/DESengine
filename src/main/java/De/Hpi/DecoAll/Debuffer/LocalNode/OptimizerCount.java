@@ -24,9 +24,11 @@ public class OptimizerCount implements Runnable{
     private ConcurrentLinkedQueue<ArrayList<Tuple>> dataQueue;
 
     private Query query;
-    private double localWindowSize;
+    private double predictWindowSize;
 
     private long currentTupleCounter;
+    private long totalTupleCounter;
+    private long localWindowCouter;
 
 
     private long tupleCounter;
@@ -45,11 +47,10 @@ public class OptimizerCount implements Runnable{
 
     //For Deco
     private LocalWindow localWindow;
-    private LocalTask localTask;
 
-    private long predictWindowSize;
-    private long predictWindowSizeEnd;
-    private long deltaSize;
+//    private long predictWindowSize;
+//    private long predictWindowSizeEnd;
+//    private long deltaSize;
 
     //For test
     private int intialTime;
@@ -62,10 +63,8 @@ public class OptimizerCount implements Runnable{
         this.messageToLocalQueue =messageToLocalQueue;
         this.dataQueue =dataQueue;
 
-
-
-        this.localTask = new LocalTask();
         this.localWindow = new LocalWindow();
+        this.localWindow.setLocalWindowCounter(1);
 
 
 
@@ -92,8 +91,9 @@ public class OptimizerCount implements Runnable{
                 ArrayList<Tuple> dataBuffer = dataQueue.poll();
                 dataBuffer.forEach(tuple -> {
 
+                    totalTupleCounter++;
                     currentTupleCounter++;
-                    int isEventHere =  isEventHereTimeBased();
+                    int isEventHere =  isEventHereCountBased();
                     processWindow(tuple, isEventHere);
 
                     if(isEventHere == 4){
@@ -112,66 +112,99 @@ public class OptimizerCount implements Runnable{
 
 
     //the end tuple of a window always belongs to next window,
-    private int isEventHereTimeBased(){
+    private int isEventHereCountBased(){
+        /*to make a fair comparison we let all baselines
+         and our approaches be the same structures. This function
+         may affect the performance since it does 'if' twice.
+         */
         if(currentTupleCounter < predictWindowSize){
             //incremental aggregation
             return 1;
-        }else if(currentTupleCounter == predictWindowSize){
-            //send partial result
-            return 2;
-        }else if(currentTupleCounter < predictWindowSizeEnd){
-            //send tuple
-            return 3;
-        }else if(currentTupleCounter == predictWindowSizeEnd){
-            //send frequencies
-            return 4;
         }else{
-            //stop processing
-            return 5;
+            //send partial results
+            return 2;
         }
+//        if(currentTupleCounter < predictWindowSize){
+//            //incremental aggregation
+//            return 1;
+//        }else if(currentTupleCounter == predictWindowSize){
+//            //send partial result
+//            return 2;
+//        }else if(currentTupleCounter < predictWindowSizeEnd){
+//            //send tuple
+//            return 3;
+//        }else if(currentTupleCounter == predictWindowSizeEnd){
+//            //send frequencies
+//            return 4;
+//        }else{
+//            //stop processing
+//            return 5;
+//        }
     }
 
 
     private void processWindow(Tuple tuple, int isEventHere) {
-        //optimizer can calculate all the queries
+        //optimizer can calculate all the queries.
+        calculate(tuple, localWindow);
+        switch (isEventHere){
+            //1 processing
+            case 1:{
 
-        //incremental aggregation
-        if(isEventHere == 1){
-            localWindow.fixedTupleList.add(tuple);
-            calculate(tuple);
-        //send partial result
-        }else if(isEventHere == 2){
-            localWindow.fixedTupleList.add(tuple);
-            calculate(tuple);
-            Tuple tuple1PR = new Tuple();
-            tuple1PR.EVENT = 2;
-            tuple1PR.DATA = localWindow.result;
-            tuple1PR.TIME = localWindow.count;
-//            sendTuple(tuple1PR);
-        //send tuple
-        }else if(isEventHere == 3){
-            tuple.EVENT = 3;
-            localWindow.unfixedTupleList.add(tuple);
-//            sendTuple(tuple);
-        //send tuple and frequencies
-        }else if(isEventHere == 4){
-            localWindow.unfixedTupleList.add(tuple);
-//            sendTuple(tuple);
-            Tuple tuple1PR = new Tuple();
-            tuple1PR.EVENT = 4;
-            tuple1PR.DATA =  currentTupleCounter * 1000 / (tuple.TIME - intialTime);
-            tuple1PR.TIME = (int) System.currentTimeMillis();
-//            sendTuple(tuple1PR);
-            currentTupleCounter = 0;
+                break;
+            }
+            //2 end the window and send results
+            default :{
+               MessageToRoot messageToRoot = new MessageToRoot();
+               messageToRoot.setMessageType(4);
+               messageToRoot.count = localWindow.count;
+               messageToRoot.result = localWindow.result;
+               messageToRootQueue.offer(messageToRoot);
+
+               localWindow.count = 0;
+               localWindow.result = 0;
+               localWindow.localWindowCounterAdd();
+
+                break;
+            }
         }
+
+//        //incremental aggregation
+//        if(isEventHere == 1){
+//            localWindow.fixedTupleList.add(tuple);
+//            calculate(tuple);
+//        //send partial result
+//        }else if(isEventHere == 2){
+//            localWindow.fixedTupleList.add(tuple);
+//            calculate(tuple);
+//            Tuple tuple1PR = new Tuple();
+//            tuple1PR.EVENT = 2;
+//            tuple1PR.DATA = localWindow.result;
+//            tuple1PR.TIME = localWindow.count;
+////            sendTuple(tuple1PR);
+//        //send tuple
+//        }else if(isEventHere == 3){
+//            tuple.EVENT = 3;
+//            localWindow.unfixedTupleList.add(tuple);
+////            sendTuple(tuple);
+//        //send tuple and frequencies
+//        }else if(isEventHere == 4){
+//            localWindow.unfixedTupleList.add(tuple);
+////            sendTuple(tuple);
+//            Tuple tuple1PR = new Tuple();
+//            tuple1PR.EVENT = 4;
+//            tuple1PR.DATA =  currentTupleCounter * 1000 / (tuple.TIME - intialTime);
+//            tuple1PR.TIME = (int) System.currentTimeMillis();
+////            sendTuple(tuple1PR);
+//            currentTupleCounter = 0;
+//        }
 
 
     }
 
 
 
-    void calculate(Tuple tuple){
-            switch (localTask.query.getFunction()) {
+    void calculate(Tuple tuple, LocalWindow localWindow){
+            switch (query.getFunction()) {
                 case Configuration.COUNT: {
                     localWindow.count++;
                     break;
@@ -224,7 +257,7 @@ public class OptimizerCount implements Runnable{
         while(true){
             if(!messageToLocalQueue.isEmpty()){
                 MessageToLocal messageToLocal = messageToLocalQueue.poll();
-                this.localWindowSize = messageToLocal.localWindowSize;
+                this.predictWindowSize = messageToLocal.localWindowSize;
                 break;
             }else{
                 try {

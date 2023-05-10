@@ -31,8 +31,8 @@ public class LocalWindow{
     public void setLocalWindowCounter(int windowCounter) {
         this.localWindowCounter = windowCounter;
     }
-    public void windowUsedCounterDelete(){
-        this.localWindowCounter--;
+    public void localWindowCounterAdd() {
+        this.localWindowCounter++;
     }
 
 }
