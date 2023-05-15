@@ -20,8 +20,10 @@ public class Configuration implements ConfigurationTopology, ConfigurationWindow
     //expired time
     public static final int EXPIREDTIME = 1000; //watermark of intermediate window and root window
     //debug mode, output much more information, mainly print message between nodes
-    public static final boolean DEBUGMODE_ROOT = true;
-    public static final boolean DEBUGMODE_LOCAL = true;
+    public static final boolean DEBUGMODE_ROOT = false;
+    public static final boolean DEBUGMODE_LOCAL = false;
+    public static final boolean DEBUGMODE_GENERATOR = false;
+    public static final boolean DEBUGMODE_PRINTER = true;
     //windows & Linuxs
     public static final boolean WINDOWS = true;
     //auto querys, from 1-3 are quantiles

@@ -17,9 +17,6 @@ public class DataGeneratorRealSetup implements Runnable{
     private AtomicLong eventRatesCurrent;
     private Random random;
     private long eventRates;
-    private int eventRateRangeMax;
-    private int eventRateRangeMin;
-    private int eventRateCorrection;
     private long timeTemp;
     private long eventCounter;
     private long startTimeEverySecond;
@@ -36,9 +33,6 @@ public class DataGeneratorRealSetup implements Runnable{
         this.eventRatesCurrent = eventRatesCurrent;
         this.random = new Random();
         this.eventRates = conf.eventGenerateRate;
-        this.eventRateRangeMax = conf.eventRatesChangingRange*100;
-        this.eventRateRangeMin = conf.eventRatesChangingRange*-100;
-        this.eventRateCorrection = 10000;
         this.timeTemp = System.currentTimeMillis();
         this.startTimeEverySecond = 0;
 
@@ -55,13 +49,13 @@ public class DataGeneratorRealSetup implements Runnable{
 
 
     void readDuplicateFromDiskOpenUniVocityCSVByBuffer(){
+        startTimeEverySecond = System.currentTimeMillis();
         while (!Thread.currentThread().isInterrupted()) {
             ArrayList<Tuple> dataBuffer = new ArrayList<>(conf.MAXBUFFERSIZE);
-            startTimeEverySecond = System.currentTimeMillis();
             try {
 //                if(dataQueue.size() < conf.DATAGENERATORMAXIMIUMBUFFER) {
                 //we assume our generator is fast enough
-                if(eventCounter >= eventRates) {
+                if(eventCounter <= eventRates) {
                     for(int i = 0; i<conf.MAXBUFFERSIZE; i++){
                         Tuple tuple = new Tuple();
                         tuple.TIME = (int) System.currentTimeMillis();
@@ -91,12 +85,14 @@ public class DataGeneratorRealSetup implements Runnable{
                     long tempTime = System.currentTimeMillis() - startTimeEverySecond;
                     if(tempTime > 1000)
                         System.out.println("Warning!!! The generator is too slow!!!");
+                    else
+                        Thread.sleep(1000 - tempTime);
                     eventCounter = 0;
-                    Thread.sleep(1000 - tempTime);
-
+                    startTimeEverySecond = System.currentTimeMillis();
                     //change event rates
-                    eventRates *= 1 + (random.nextInt(eventRateRangeMax -eventRateRangeMin)
-                            + eventRateRangeMin) / eventRateCorrection;
+                    eventRates = (long) (conf.eventGenerateRate *
+                            (1 + (random.nextInt(conf.eventRatesChangingRange*100 - conf.eventRatesChangingRange*-100)
+                                                + conf.eventRatesChangingRange*-100) / 10000.0));
                     eventRatesCurrent.set(eventRates);
                 }
             } catch (InterruptedException e) {

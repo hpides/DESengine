@@ -10,7 +10,8 @@ import java.util.Random;
 import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.atomic.AtomicLong;
 
-import static De.Hpi.DecoAll.Debuffer.Configure.Configuration.DEBUGMODE_LOCAL;
+import static De.Hpi.DecoAll.Debuffer.Configure.Configuration.*;
+
 /*
 We let 1000 tuples be a data chunk and window operator take one chunk everytime.
 If all the event rates change the local window sizes will stay the same.
@@ -39,10 +40,10 @@ public class InputStream implements Runnable {
         //start generators
         ArrayList<Thread> threads = new ArrayList<Thread>();
         for(int i = 1; i <= this.threadNumber; i++){
-            conf.setNodeId(i);
+//            conf.setNodeId(i);
             //generate data from a synthetic dataset
-//            threads.add(new Thread(new DataGeneratorSimu(conf, dataQueue, tupleCounter)));
-            threads.add(new Thread(new DataGeneratorRealSetup(conf, dataQueue, tupleCounter, eventRatesCurrent)));
+            threads.add(new Thread(new DataGeneratorSimu(conf, dataQueue, tupleCounter)));
+//            threads.add(new Thread(new DataGeneratorRealSetup(conf, dataQueue, tupleCounter, eventRatesCurrent)));
         }
         threads.forEach(thread -> thread.start());
 
@@ -57,8 +58,8 @@ public class InputStream implements Runnable {
         tupleCounter.set(0);
 
         while(true){
-            if(DEBUGMODE_LOCAL) {
-                if (System.currentTimeMillis() - endtime > conf.BenchMarkOutputFrequency) {
+            if(DEBUGMODE_GENERATOR) {
+                if (System.currentTimeMillis() - endtime >= conf.BenchMarkOutputFrequency) {
                     endtime = System.currentTimeMillis();
                     System.out.println("LocalNode--" + conf.getNodeId() + "--INFO"
                             + "  Throughput:  " + tupleCounter.get() / ((endtime - begintime) / 1000.0)

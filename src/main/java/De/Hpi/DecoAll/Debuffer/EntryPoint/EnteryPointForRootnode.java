@@ -11,12 +11,15 @@ public class EnteryPointForRootnode {
         int queryNumber = conf.queryNumber;
 
         if(Integer.valueOf(args[1]) != 0){
-            conf.queryModes = Integer.valueOf(args[1]);
+            conf.localNumber = Integer.valueOf(args[1]);
+        }
+        if(Integer.valueOf(args[2]) != 0){
+            conf.queryModes = Integer.valueOf(args[2]);
+        }
+        if(Integer.valueOf(args[3]) != 0){
+            conf.GeneratorThreadNumber = Integer.valueOf(args[3]);
         }
 
-        if(Integer.valueOf(args[2]) != 0){
-            conf.GeneratorThreadNumber = Integer.valueOf(args[2]);
-        }
         RootNode rootNode = new RootNode(conf, Integer.valueOf(args[0]));
     }
 

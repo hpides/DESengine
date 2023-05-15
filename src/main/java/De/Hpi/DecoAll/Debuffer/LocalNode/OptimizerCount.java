@@ -28,7 +28,6 @@ public class OptimizerCount implements Runnable{
 
     private long currentTupleCounter;
     private long totalTupleCounter;
-    private long localWindowCouter;
 
 
     private long tupleCounter;
@@ -47,6 +46,7 @@ public class OptimizerCount implements Runnable{
 
     //For Deco
     private LocalWindow localWindow;
+
 
 //    private long predictWindowSize;
 //    private long predictWindowSizeEnd;
@@ -163,6 +163,7 @@ public class OptimizerCount implements Runnable{
                localWindow.count = 0;
                localWindow.result = 0;
                localWindow.localWindowCounterAdd();
+                currentTupleCounter = 0;
 
                 break;
             }

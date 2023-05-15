@@ -7,7 +7,7 @@ import org.msgpack.annotation.Message;
 public class MessageToLocal {
 
     private int nodeId;
-    //Type 1: query, Type, 2: event rate, 3: local window size
+    //Type 1: query, Type, 2: event rate, 3: local window size, 4: Result
     private int messageType;
     public Query query;
     public double localWindowSize;

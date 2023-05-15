@@ -1,5 +1,6 @@
 package De.Hpi.DecoAll.Debuffer.RootNode;
 import De.Hpi.DecoAll.Debuffer.Configure.Configuration;
+import De.Hpi.DecoAll.Debuffer.Dao.Finalresult;
 import De.Hpi.DecoAll.Debuffer.Dao.Query;
 import De.Hpi.DecoAll.Debuffer.Dao.Tuple;
 import De.Hpi.DecoAll.Debuffer.Dao.WindowCollection;
@@ -20,7 +21,7 @@ public class RootNode {
     private QueryGenerator queryGenerator;
     private ConcurrentLinkedQueue<MessageToLocal> messageToLocalQueue;
     private ConcurrentLinkedQueue<Query> queryList;
-    private ConcurrentLinkedQueue<WindowCollection> resultQueue;
+    private ConcurrentLinkedQueue<Finalresult> resultQueue;
     private ConcurrentLinkedQueue<MessageToRoot> messageToRootQueue;
     private ConcurrentLinkedQueue<ArrayList<Tuple>> dataQueue;
 
@@ -37,7 +38,7 @@ public class RootNode {
         this.threadsList = new ArrayList<>();
         this.messageToLocalQueue = new ConcurrentLinkedQueue<MessageToLocal>();
         this.queryList = new ConcurrentLinkedQueue<Query>();
-        this.resultQueue = new ConcurrentLinkedQueue<WindowCollection>();
+        this.resultQueue = new ConcurrentLinkedQueue<Finalresult>();
         this.messageToRootQueue = new ConcurrentLinkedQueue<MessageToRoot>();
         this.dataQueue = new ConcurrentLinkedQueue<ArrayList<Tuple>>();
         this.queryGenerator =new QueryGenerator(messageToLocalQueue, queryList, conf);
@@ -72,7 +73,7 @@ public class RootNode {
         //perform aggregation in root node
         threadsList.add(new Thread(new RootComputationEngineDecentral(messageToRootQueue, messageToLocalQueue, conf, resultQueue, queryList)));
         //output result
-//        threadsList.add(new Thread(new PrintResult(resultQueue, conf)));
+        threadsList.add(new Thread(new PrintResult(resultQueue, conf)));
     }
 
     public void startRootNode(){

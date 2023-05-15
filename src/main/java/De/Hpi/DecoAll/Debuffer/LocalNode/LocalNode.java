@@ -37,7 +37,7 @@ public class LocalNode {
 
         //for debug
 //        this.conf.countgranularity =  conf.queryModes;
-
+//        System.out.println(nodeId);
         initialLocalode();
         startLocalNode();
     }
@@ -55,7 +55,7 @@ public class LocalNode {
         //generate data
         InputStream inputStream = new InputStream(conf, dataQueue, conf.GeneratorThreadNumber);
 //        threadsList.add(new Thread(new DataGenerator(conf, dataQueue)));
-//        threadsList.add(new Thread(inputStream));
+        threadsList.add(new Thread(inputStream));
 
         //decentralized aggregation
         threadsList.add(new Thread(new OptimizerCount(conf, inputStream, messageToRootQueue, messageToLocalQueue, dataQueue)));

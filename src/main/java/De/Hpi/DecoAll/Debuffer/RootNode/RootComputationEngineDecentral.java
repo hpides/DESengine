@@ -1,23 +1,18 @@
 package De.Hpi.DecoAll.Debuffer.RootNode;
 
 import De.Hpi.DecoAll.Debuffer.Configure.Configuration;
-import De.Hpi.DecoAll.Debuffer.Dao.LocalEventRate;
+import De.Hpi.DecoAll.Debuffer.Dao.*;
 import De.Hpi.DecoAll.Debuffer.Message.MessageToLocal;
 import De.Hpi.DecoAll.Debuffer.Message.MessageToRoot;
-import De.Hpi.DecoAll.Debuffer.Dao.Query;
-import De.Hpi.DecoAll.Debuffer.Dao.RootTask;
-import De.Hpi.DecoAll.Debuffer.Dao.WindowCollection;
 
 import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.LinkedList;
 import java.util.concurrent.ConcurrentLinkedQueue;
-import java.util.stream.Collectors;
 
 public class RootComputationEngineDecentral implements Runnable {
 
     private Configuration conf;
-    private ConcurrentLinkedQueue<WindowCollection> resultQueue;
+    private ConcurrentLinkedQueue<Query> queryQueue;
+    private ConcurrentLinkedQueue<Finalresult> resultQueue;
     private ConcurrentLinkedQueue<MessageToRoot> messageToRootQueue;
     private ConcurrentLinkedQueue<MessageToLocal> messageToLocalQueue;
     private Query query;
@@ -26,8 +21,10 @@ public class RootComputationEngineDecentral implements Runnable {
     //0 in total, 1 node 1, 2 node 2
     private double[] localWindowSizes;
 
-    private ConcurrentLinkedQueue<Query> queryQueue;
-    private ArrayList<RootTask> rootTasks;
+    private RootWindow rootWindow;
+    private ArrayList<PartialResult> localPartialResultList;
+    private int localPartialResultsCounter;
+
     private int currentSliceId;
     private long tupleCounter;
     private boolean countBasedFlag;
@@ -40,7 +37,7 @@ public class RootComputationEngineDecentral implements Runnable {
     RootComputationEngineDecentral(ConcurrentLinkedQueue<MessageToRoot> messageToRootQueue,
                                    ConcurrentLinkedQueue<MessageToLocal> messageToLocalQueue,
                                    Configuration conf,
-                                   ConcurrentLinkedQueue<WindowCollection> resultQueue,
+                                   ConcurrentLinkedQueue<Finalresult> resultQueue,
                                    ConcurrentLinkedQueue<Query> queryQueue){
         this.conf = conf;
         this.resultQueue =resultQueue;
@@ -50,7 +47,11 @@ public class RootComputationEngineDecentral implements Runnable {
         this.localEventRates = new ArrayList<>();
         this.localWindowSizes = new double[conf.localNumber + 1];
 
-        this.rootTasks = new ArrayList<>();
+        this.rootWindow = new RootWindow();
+        this.rootWindow.setWindowWaitCounter(1);
+        this.localPartialResultList = new ArrayList<>();
+
+
         this.currentSliceId = 0;
         this.tupleCounter = 0;
         this.countBasedFlag = false;
@@ -68,8 +69,14 @@ public class RootComputationEngineDecentral implements Runnable {
         for(int i = 1; i <= conf.localNumber; i++){
             LocalEventRate localEventRate = new LocalEventRate();
             localEventRate.setNodeId(i);
-            localEventRate.setEventRates(0);
+            localEventRate.setEventRates(conf.eventGenerateRate);
             localEventRates.add(localEventRate);
+
+            PartialResult partialResult = new PartialResult();
+            partialResult.setNodeId(i);
+            partialResult.count = 0;
+            partialResult.result = 0;
+            localPartialResultList.add(partialResult);
         }
         localEventRatesCounter = 0;
     }
@@ -88,15 +95,27 @@ public class RootComputationEngineDecentral implements Runnable {
                                 localEventRatesCounter++;
                             }
                         });
-
                         //we get all event rates
                         if(localEventRatesCounter == conf.localNumber){
                             calculateLocalWindowSize();
                         }
                         break;
                     }
-                    default:
+                    //get results
+                    default: {
+//                        System.out.println(messageToRoot.getNodeId() + "   " + messageToRoot.count+ "   " + messageToRoot.result);
+                        localPartialResultList.forEach(partialResult -> {
+                            if (partialResult.getNodeId() == messageToRoot.getNodeId()) {
+                                partialResult.count = messageToRoot.count;
+                                partialResult.result = messageToRoot.result;
+                                localPartialResultsCounter++;
+                            }
+                        });
+                        if(localPartialResultsCounter == conf.localNumber){
+                            calculateResult();
+                        }
                         break;
+                    }
                 }
             }
         }
@@ -125,9 +144,52 @@ public class RootComputationEngineDecentral implements Runnable {
         }
         //clear
         localEventRatesCounter = 0;
+        localWindowSizes[0] = 0;
     }
 
-    void sendMessage(MessageToLocal messageToLocal){
+    private void calculateResult(){
+        //calculate
+        Finalresult finalresult = new Finalresult();
+        finalresult.setWindowId(rootWindow.getWindowId());
+        localPartialResultList.forEach(partialResult -> {
+            calculate(partialResult, finalresult);
+        });
+        //send result
+        resultQueue.offer(finalresult);
+        //clear
+        localPartialResultsCounter = 0;
+        rootWindow.addWindowId();
+    }
+
+    void calculate(PartialResult partialResult, Finalresult finalresult){
+        switch (query.getFunction()) {
+            case Configuration.COUNT: {
+                finalresult.count += partialResult.count;
+                break;
+            }
+            case Configuration.SUM: {
+                finalresult.result += partialResult.result;
+                break;
+            }
+            case Configuration.AVERAGE: {
+                finalresult.count += partialResult.count;
+                finalresult.result += partialResult.result;
+                break;
+            }
+            case Configuration.MAX: {
+                finalresult.result = Math.max(finalresult.result, partialResult.result);
+                break;
+            }
+            case Configuration.MIN: {
+                finalresult.result = Math.min(finalresult.result, partialResult.result);
+                break;
+            }
+            default:
+                break;
+        }
+    }
+
+    private void sendMessage(MessageToLocal messageToLocal){
         messageToLocalQueue.offer(messageToLocal);
     }
 
