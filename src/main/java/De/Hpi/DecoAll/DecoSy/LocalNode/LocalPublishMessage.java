@@ -73,6 +73,7 @@ public class LocalPublishMessage implements Runnable{
                                         + "  EventRate:  " + messageToRoot.eventRate
                                         + "  count:  " + messageToRoot.count
                                         + "  result:  " + messageToRoot.result
+                                        + "  size:  " + messageToRoot.bufferTupleList.size()
 //                                        + "  result:  " + 0
 //                                        + "  time:  " + 0
 //                                        + "  event:  " + tuple.EVENT

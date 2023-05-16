@@ -8,6 +8,10 @@ public class LocalWindow{
     //it decide when to delete this localwindow (is it still used by task)
     private int localWindowCounter;
 
+    //buffer
+    public ArrayList<Tuple> partialResultTupleList;
+    //buffer
+    public ArrayList<Tuple> bufferTupleList;
     //for fixed slice
     public ArrayList<Tuple> fixedTupleList;
     //for unfixed slice

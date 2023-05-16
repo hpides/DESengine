@@ -8,6 +8,7 @@ import De.Hpi.DecoAll.DecoSy.Message.MessageToRoot;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.concurrent.ConcurrentLinkedQueue;
+import java.util.concurrent.atomic.AtomicBoolean;
 
 public class RootComputationEngineDecentral implements Runnable {
 
@@ -112,7 +113,24 @@ public class RootComputationEngineDecentral implements Runnable {
                         }
                         break;
                     }
-                    //get results
+                    //get event rates, partial results and buffer
+                    case 5:{
+                        localPartialResultList.forEach(partialResult -> {
+                            if (partialResult.getNodeId() == messageToRoot.getNodeId() && partialResult.counterForStep == 0) {
+                                partialResult.count = messageToRoot.count;
+                                partialResult.result = messageToRoot.result;
+                                partialResult.bufferTupleList = messageToRoot.bufferTupleList;
+                                partialResult.eventRate = messageToRoot.eventRate;
+                                partialResult.counterForStep = 1;
+                                localPartialResultsCounter++;
+                            }
+                        });
+                        if(localPartialResultsCounter == conf.localNumber){
+                            calculateResultAndBuffer();
+                        }
+                        break;
+                    }
+                    //get results (4)
                     default: {
 //                        System.out.println(messageToRoot.getNodeId() + "   " + messageToRoot.count+ "   " + messageToRoot.result);
                         localPartialResultList.forEach(partialResult -> {
@@ -173,7 +191,7 @@ public class RootComputationEngineDecentral implements Runnable {
                 localEventRates.get(i).previousCorrectionFactorList.forEach(windowSizeTemp -> {
                     localEventRates.get(finalI).correctionFactor += windowSizeTemp;
                 });
-                localEventRates.get(finalI).correctionFactor = localEventRates.get(finalI).correctionFactor / 10.0;
+                localEventRates.get(finalI).correctionFactor = (int)localEventRates.get(finalI).correctionFactor / 10.0;
 
 
                 MessageToLocal messageToLocal = new MessageToLocal();
@@ -189,6 +207,84 @@ public class RootComputationEngineDecentral implements Runnable {
         localWindowSizes[0] = 0;
     }
 
+    private void calculateResultAndBuffer(){
+        localPartialResultList.forEach(partialResult -> {
+            partialResult.counterForStep = 0;
+            localWindowSizes[0] += partialResult.eventRate;
+            localWindowSizes[partialResult.getNodeId()] = partialResult.eventRate;
+        });
+        //calculate local window size, not smart but works
+        localWindowSizes[1] = query.getRange();
+        if(conf.localNumber >= 2) {
+            for (int i = 2; i <= conf.localNumber; i++) {
+                localWindowSizes[i] = (int)(localWindowSizes[i] / localWindowSizes[0] * query.getRange());
+                localWindowSizes[1] -= localWindowSizes[i];
+            }
+        }
+
+        //the prediction is correct, so lets move to next window
+        if(verifiedPrediction()){
+            calculateResult();
+
+            for (int i = 0; i < conf.localNumber; i++) {
+                localEventRates.get(i).previousPredictedWindowSize = localEventRates.get(i).predictedWindowSize;
+                localEventRates.get(i).predictedWindowSize =  localWindowSizes[i+1];
+                localEventRates.get(i).previousCorrectionFactorList.addLast(Math.abs(localEventRates.get(i).predictedWindowSize -
+                        localEventRates.get(i).previousPredictedWindowSize));
+                localEventRates.get(i).correctionFactor = (int)(localEventRates.get(i).correctionFactor * conf.InitializationSteps -
+                        localEventRates.get(i).previousCorrectionFactorList.getFirst() +
+                        localEventRates.get(i).previousCorrectionFactorList.getLast()) / conf.InitializationSteps;
+                localEventRates.get(i).previousCorrectionFactorList.removeFirst();
+
+                MessageToLocal messageToLocal = new MessageToLocal();
+                messageToLocal.setNodeId(i+1);
+                messageToLocal.setMessageType(3);
+                messageToLocal.localWindowSize = localEventRates.get(i).predictedWindowSize;
+                messageToLocal.correctionFactor = localEventRates.get(i).correctionFactor;
+                sendMessage(messageToLocal);
+
+//                localPartialResultList.get(i).bufferTupleList = null;
+            }
+            //clear
+            localEventRatesCounter = 0;
+            localWindowSizes[0] = 0;
+        //the prediction is wrong
+        }else{
+            for (int i = 0; i < conf.localNumber; i++) {
+                localEventRates.get(i).previousPredictedWindowSize = localEventRates.get(i).predictedWindowSize;
+                localEventRates.get(i).predictedWindowSize =  localWindowSizes[i+1];
+                localEventRates.get(i).previousCorrectionFactorList.addLast(Math.abs(localEventRates.get(i).predictedWindowSize -
+                        localEventRates.get(i).previousPredictedWindowSize));
+                localEventRates.get(i).correctionFactor = (int)(localEventRates.get(i).correctionFactor * conf.InitializationSteps -
+                        localEventRates.get(i).previousCorrectionFactorList.getFirst() +
+                        localEventRates.get(i).previousCorrectionFactorList.getLast()) / conf.InitializationSteps;
+                localEventRates.get(i).previousCorrectionFactorList.removeFirst();
+
+                MessageToLocal messageToLocal = new MessageToLocal();
+                messageToLocal.setNodeId(i + 1);
+                messageToLocal.setMessageType(6);
+                messageToLocal.localWindowSize = localEventRates.get(i).predictedWindowSize;
+                messageToLocal.correctionFactor = localEventRates.get(i).correctionFactor;
+                sendMessage(messageToLocal);
+            }
+        }
+    }
+
+    private boolean verifiedPrediction(){
+        AtomicBoolean flag = new AtomicBoolean(false);
+        localPartialResultList.forEach(partialResult -> {
+            if (localWindowSizes[partialResult.getNodeId()] >
+                    (localEventRates.get(partialResult.getNodeId()).predictedWindowSize -
+                            localEventRates.get(partialResult.getNodeId()).correctionFactor) &&
+                localWindowSizes[partialResult.getNodeId()] <=
+                        (localEventRates.get(partialResult.getNodeId()).predictedWindowSize +
+                                localEventRates.get(partialResult.getNodeId()).correctionFactor)){
+                flag.set(true);
+            }
+        });
+        return flag.get();
+    }
+
     private void calculateResult(){
         //calculate
         Finalresult finalresult = new Finalresult();
@@ -196,6 +292,9 @@ public class RootComputationEngineDecentral implements Runnable {
         localPartialResultList.forEach(partialResult -> {
             partialResult.counterForStep = 0;
             calculate(partialResult, finalresult);
+            calculateBuffer(partialResult, finalresult, (int) (localWindowSizes[partialResult.getNodeId()] -
+                                localEventRates.get(partialResult.getNodeId()).predictedWindowSize +
+                                localEventRates.get(partialResult.getNodeId()).correctionFactor));
         });
         //send result
         resultQueue.offer(finalresult);
@@ -229,6 +328,37 @@ public class RootComputationEngineDecentral implements Runnable {
             }
             default:
                 break;
+        }
+    }
+
+    void calculateBuffer(PartialResult partialResult, Finalresult finalresult, int bufferSize){
+        for(int i = 0; i < bufferSize; i++) {
+            Tuple tuple = partialResult.bufferTupleList.get(i);
+            switch (query.getFunction()) {
+                case Configuration.COUNT: {
+                    finalresult.count ++;
+                    break;
+                }
+                case Configuration.SUM: {
+                    finalresult.result += tuple.DATA;
+                    break;
+                }
+                case Configuration.AVERAGE: {
+                    finalresult.count ++;
+                    finalresult.result += tuple.DATA;
+                    break;
+                }
+                case Configuration.MAX: {
+                    finalresult.result = Math.max(finalresult.result, tuple.DATA);
+                    break;
+                }
+                case Configuration.MIN: {
+                    finalresult.result = Math.min(finalresult.result, tuple.DATA);
+                    break;
+                }
+                default:
+                    break;
+            }
         }
     }
 

@@ -8,6 +8,7 @@ import De.Hpi.DecoAll.DecoSy.Dao.Tuple;
 import De.Hpi.DecoAll.DecoSy.Generator.InputStream;
 import De.Hpi.DecoAll.DecoSy.Message.MessageToLocal;
 import De.Hpi.DecoAll.DecoSy.Message.MessageToRoot;
+import com.beust.ah.A;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -28,6 +29,7 @@ public class OptimizerCount implements Runnable{
 
     private Query query;
     private double predictWindowSize;
+    private double bufferSize;
 
     private long currentTupleCounter;
     private long totalTupleCounter;
@@ -69,6 +71,7 @@ public class OptimizerCount implements Runnable{
 
         this.localWindow = new LocalWindow();
         this.localWindow.setLocalWindowCounter(1);
+        this.localWindow.bufferTupleList = new ArrayList<>();
         this.stepFlag = 1;
 
 
@@ -93,6 +96,7 @@ public class OptimizerCount implements Runnable{
         while(true) {
             //calculation step
             calculationStep();
+            checkForCorrection();
         }
     }
 
@@ -119,16 +123,16 @@ public class OptimizerCount implements Runnable{
          and our approaches be the same structures. This function
          may affect the performance since it does 'if' twice.
          */
-        if(currentTupleCounter < predictWindowSize){
+        if(currentTupleCounter <= predictWindowSize){
             //incremental aggregation
             return 1;
-        }else if(currentTupleCounter == predictWindowSize){
+//        }else if(currentTupleCounter == predictWindowSize){
             //send partial result
-            return 2;
-        }else if(currentTupleCounter < bufferSize){
-            //send tuple
+//            return 2;
+        }else if(currentTupleCounter < predictWindowSize + bufferSize){
+            //send tuples
             return 3;
-        }else if(currentTupleCounter == bufferSize){
+        }else if(currentTupleCounter == predictWindowSize + bufferSize){
             //send frequencies
             return 4;
         }else{
@@ -140,62 +144,41 @@ public class OptimizerCount implements Runnable{
 
     private void processWindow(Tuple tuple, int isEventHere) {
         //optimizer can calculate all the queries.
-        calculate(tuple, localWindow);
         switch (isEventHere){
             //1 processing
             case 1:{
-
+                calculate(tuple, localWindow);
+                localWindow.partialResultTupleList.add(tuple);
                 break;
             }
             //2 end the window and send results
-            default :{
-               MessageToRoot messageToRoot = new MessageToRoot();
-               messageToRoot.setMessageType(4);
-               messageToRoot.count = localWindow.count;
-               messageToRoot.result = localWindow.result;
-               messageToRoot.windowId = localWindow.getLocalWindowCounter();
-               messageToRootQueue.offer(messageToRoot);
+            case 3:{
+                localWindow.bufferTupleList.add(tuple);
+                break;
+            }
+            case 4 : {
+//               calculate(tuple, localWindow);
+                MessageToRoot messageToRoot = new MessageToRoot();
+                messageToRoot.setMessageType(5);
+                messageToRoot.count = localWindow.count;
+                messageToRoot.result = localWindow.result;
+                messageToRoot.windowId = localWindow.getLocalWindowCounter();
+                messageToRoot.bufferTupleList = localWindow.bufferTupleList;
+                messageToRoot.eventRate = inputStream.getEventRates();
+                messageToRootQueue.offer(messageToRoot);
 
-               localWindow.count = 0;
-               localWindow.result = 0;
-               localWindow.localWindowCounterAdd();
-               currentTupleCounter = 0;
-               //move to next window's initialization step
-               stepFlag = 1;
+                localWindow.count = 0;
+                localWindow.result = 0;
+                localWindow.localWindowCounterAdd();
+                currentTupleCounter = 0;
+                //move to next window's initialization step
+                stepFlag = 1;
+                break;
+            }
+            default:{
                 break;
             }
         }
-
-//        //incremental aggregation
-//        if(isEventHere == 1){
-//            localWindow.fixedTupleList.add(tuple);
-//            calculate(tuple);
-//        //send partial result
-//        }else if(isEventHere == 2){
-//            localWindow.fixedTupleList.add(tuple);
-//            calculate(tuple);
-//            Tuple tuple1PR = new Tuple();
-//            tuple1PR.EVENT = 2;
-//            tuple1PR.DATA = localWindow.result;
-//            tuple1PR.TIME = localWindow.count;
-////            sendTuple(tuple1PR);
-//        //send tuple
-//        }else if(isEventHere == 3){
-//            tuple.EVENT = 3;
-//            localWindow.unfixedTupleList.add(tuple);
-////            sendTuple(tuple);
-//        //send tuple and frequencies
-//        }else if(isEventHere == 4){
-//            localWindow.unfixedTupleList.add(tuple);
-////            sendTuple(tuple);
-//            Tuple tuple1PR = new Tuple();
-//            tuple1PR.EVENT = 4;
-//            tuple1PR.DATA =  currentTupleCounter * 1000 / (tuple.TIME - intialTime);
-//            tuple1PR.TIME = (int) System.currentTimeMillis();
-////            sendTuple(tuple1PR);
-//            currentTupleCounter = 0;
-//        }
-
 
     }
 
@@ -230,7 +213,33 @@ public class OptimizerCount implements Runnable{
     }
 
 
+    void checkForCorrection(){
+        while(stepFlag == 1){
+            if(!messageToLocalQueue.isEmpty()){
+                MessageToLocal messageToLocal = messageToLocalQueue.poll();
+                //local window size or Correction
+                if(messageToLocal.getMessageType() == 3) {
+                    this.predictWindowSize = messageToLocal.localWindowSize - messageToLocal.correctionFactor;
+                    this.bufferSize = 2 * messageToLocal.correctionFactor;
 
+                    localWindow.partialResultTupleList = new ArrayList<Tuple>((int) this.predictWindowSize);
+                    localWindow.bufferTupleList = new ArrayList<Tuple>((int)this.bufferSize);
+                    //move to calculation step
+                    stepFlag = 3;
+                }else if(messageToLocal.getMessageType() == 6){
+                    this.predictWindowSize = messageToLocal.localWindowSize - messageToLocal.correctionFactor;
+                    this.bufferSize = 2 * messageToLocal.correctionFactor;
+
+                    dataQueue.offer(localWindow.partialResultTupleList);
+                    dataQueue.offer(localWindow.bufferTupleList);
+                    localWindow.partialResultTupleList = new ArrayList<Tuple>((int) this.predictWindowSize);
+                    localWindow.bufferTupleList = new ArrayList<Tuple>((int)this.bufferSize);
+                    //move to calculation step
+                    stepFlag = 3;
+                }
+            }
+        }
+    }
 
     private void queryPreProcess(){
         while(true){
@@ -264,7 +273,8 @@ public class OptimizerCount implements Runnable{
                 MessageToLocal messageToLocal = messageToLocalQueue.poll();
                 //local window size
                 if(messageToLocal.getMessageType() == 3) {
-                    this.predictWindowSize = messageToLocal.localWindowSize;
+                    this.predictWindowSize = messageToLocal.localWindowSize - messageToLocal.correctionFactor;
+                    this.bufferSize = 2 * messageToLocal.correctionFactor;
                     //move to calculation step
                     stepFlag = 3;
                 }
