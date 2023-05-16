@@ -1,4 +1,4 @@
-package De.Hpi.DecoAll.DecoSy.Configure;
+package De.Hpi.DecoAll.DecoAsy.Configure;
 
 public class Configuration implements ConfigurationTopology, ConfigurationWindow,
         ConfigurationProcessing, ConfigurationGenerator, ConfigurationMessage

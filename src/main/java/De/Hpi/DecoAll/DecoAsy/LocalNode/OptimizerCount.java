@@ -1,14 +1,13 @@
-package De.Hpi.DecoAll.DecoSy.LocalNode;
+package De.Hpi.DecoAll.DecoAsy.LocalNode;
 
-import De.Hpi.DecoAll.DecoSy.Configure.Configuration;
-import De.Hpi.DecoAll.DecoSy.Dao.LocalWindow;
-import De.Hpi.DecoAll.DecoSy.Dao.LocalisEventHere;
-import De.Hpi.DecoAll.DecoSy.Dao.Query;
-import De.Hpi.DecoAll.DecoSy.Dao.Tuple;
-import De.Hpi.DecoAll.DecoSy.Generator.InputStream;
-import De.Hpi.DecoAll.DecoSy.Message.MessageToLocal;
-import De.Hpi.DecoAll.DecoSy.Message.MessageToRoot;
-import com.beust.ah.A;
+import De.Hpi.DecoAll.DecoAsy.Configure.Configuration;
+import De.Hpi.DecoAll.DecoAsy.Dao.LocalWindow;
+import De.Hpi.DecoAll.DecoAsy.Dao.LocalisEventHere;
+import De.Hpi.DecoAll.DecoAsy.Dao.Query;
+import De.Hpi.DecoAll.DecoAsy.Dao.Tuple;
+import De.Hpi.DecoAll.DecoAsy.Generator.InputStream;
+import De.Hpi.DecoAll.DecoAsy.Message.MessageToLocal;
+import De.Hpi.DecoAll.DecoAsy.Message.MessageToRoot;
 
 import java.util.ArrayList;
 import java.util.Random;

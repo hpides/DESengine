@@ -34,7 +34,6 @@ public class PrintResult implements Runnable {
 //                            + "  function  " + window.getFunction()
 //                            + "  windowType  " + window.getWindowType()
                                         + "  result:  " + finalresult.result
-                                        + "  count:  " + finalresult.count
                         );
 //                        windowCollection.windowList.forEach(window -> {
 //                            System.out.println("rootNode--FinalAggregation"

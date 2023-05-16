@@ -1,7 +1,7 @@
-package De.Hpi.DecoAll.Deco.RootNode;
+package De.Hpi.DecoAll.DecoAsy.RootNode;
 
-import De.Hpi.DecoAll.Deco.Configure.Configuration;
-import De.Hpi.DecoAll.Deco.Dao.Finalresult;
+import De.Hpi.DecoAll.DecoAsy.Configure.Configuration;
+import De.Hpi.DecoAll.DecoAsy.Dao.Finalresult;
 
 import java.util.concurrent.ConcurrentLinkedQueue;
 

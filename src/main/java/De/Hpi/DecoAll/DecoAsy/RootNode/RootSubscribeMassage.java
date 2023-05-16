@@ -1,7 +1,7 @@
-package De.Hpi.DecoAll.DecoSy.RootNode;
+package De.Hpi.DecoAll.DecoAsy.RootNode;
 
-import De.Hpi.DecoAll.DecoSy.Configure.Configuration;
-import De.Hpi.DecoAll.DecoSy.Message.MessageToRoot;
+import De.Hpi.DecoAll.DecoAsy.Configure.Configuration;
+import De.Hpi.DecoAll.DecoAsy.Message.MessageToRoot;
 import org.msgpack.MessagePack;
 import org.zeromq.ZMQ;
 

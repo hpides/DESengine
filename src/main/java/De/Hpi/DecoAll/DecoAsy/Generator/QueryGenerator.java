@@ -1,8 +1,8 @@
-package De.Hpi.DecoAll.Deco.Generator;
+package De.Hpi.DecoAll.DecoAsy.Generator;
 
-import De.Hpi.DecoAll.Deco.Configure.Configuration;
-import De.Hpi.DecoAll.Deco.Dao.Query;
-import De.Hpi.DecoAll.Deco.Message.MessageToLocal;
+import De.Hpi.DecoAll.DecoAsy.Configure.Configuration;
+import De.Hpi.DecoAll.DecoAsy.Dao.Query;
+import De.Hpi.DecoAll.DecoAsy.Message.MessageToLocal;
 
 import java.util.concurrent.ConcurrentLinkedQueue;
 
@@ -30,7 +30,7 @@ public class QueryGenerator {
             //object, function, windowType, range, slide, startPunctuation, endPunctuation, warterMark, Batch size.
 
                 initializeQuery(Configuration.SPEED, Configuration.AVERAGE, Configuration.COUNTBASED,
-                        10000000, 0, 0, 0, 0, 0,0.5);
+                        10000, 0, 0, 0, 0, 0,0.5);
 
 
 //            initializeQuery(Configuration.SPEED,Configuration.AVERAGE,Configuration.TUMBING,

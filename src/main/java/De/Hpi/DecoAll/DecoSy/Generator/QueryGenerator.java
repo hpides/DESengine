@@ -30,7 +30,7 @@ public class QueryGenerator {
             //object, function, windowType, range, slide, startPunctuation, endPunctuation, warterMark, Batch size.
 
                 initializeQuery(Configuration.SPEED, Configuration.AVERAGE, Configuration.COUNTBASED,
-                        10000000, 0, 0, 0, 0, 0,0.5);
+                        10000, 0, 0, 0, 0, 0,0.5);
 
 
 //            initializeQuery(Configuration.SPEED,Configuration.AVERAGE,Configuration.TUMBING,

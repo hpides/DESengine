@@ -1,9 +1,9 @@
-package De.Hpi.DecoAll.DecoSy.RootNode;
+package De.Hpi.DecoAll.DecoAsy.RootNode;
 
-import De.Hpi.DecoAll.DecoSy.Configure.Configuration;
-import De.Hpi.DecoAll.DecoSy.Dao.*;
-import De.Hpi.DecoAll.DecoSy.Message.MessageToLocal;
-import De.Hpi.DecoAll.DecoSy.Message.MessageToRoot;
+import De.Hpi.DecoAll.DecoAsy.Configure.Configuration;
+import De.Hpi.DecoAll.DecoAsy.Dao.*;
+import De.Hpi.DecoAll.DecoAsy.Message.MessageToLocal;
+import De.Hpi.DecoAll.DecoAsy.Message.MessageToRoot;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
