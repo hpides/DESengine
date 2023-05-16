@@ -55,6 +55,8 @@ Deco is also a decentralized approach that is based on Desis. Deco can move calc
 - Deco
   - Node Id:
     - The id of the node that is deployed with Desis.
+  - Local Nodes:
+    - How many local nodes. 
   - Query Modes:
     - The query mode is to choose the query pattern that is set into query generation file.
   - Generator Thread Number:
