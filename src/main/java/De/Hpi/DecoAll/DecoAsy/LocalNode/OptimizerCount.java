@@ -28,7 +28,8 @@ public class OptimizerCount implements Runnable{
 
     private Query query;
     private double predictWindowSize;
-    private double bufferSize;
+    private double bufferSizeEnd;
+    private double bufferSizeStart;
 
     private long currentTupleCounter;
     private long totalTupleCounter;
@@ -52,7 +53,7 @@ public class OptimizerCount implements Runnable{
     private LocalWindow localWindow;
     //1 initialization, 2 prediction(root), 3 calculation
     private int stepFlag;
-
+    private ArrayList<Tuple> localBuffer;
 //    private long predictWindowSize;
 //    private long predictWindowSizeEnd;
 //    private long deltaSize;
@@ -71,9 +72,10 @@ public class OptimizerCount implements Runnable{
         this.localWindow = new LocalWindow();
         this.localWindow.setLocalWindowCounter(1);
         this.localWindow.partialResultTupleList = new ArrayList<>();
-        this.localWindow.bufferTupleList = new ArrayList<>();
+        this.localWindow.bufferTupleListStart = new ArrayList<>();
+        this.localWindow.bufferTupleListEnd = new ArrayList<>();
         this.stepFlag = 1;
-
+        this.localBuffer = new ArrayList<>();
 
         this.tupleCounter = 0;
         this.operators = new boolean[conf.OPERATORS];
@@ -123,21 +125,23 @@ public class OptimizerCount implements Runnable{
          and our approaches be the same structures. This function
          may affect the performance since it does 'if' twice.
          */
-        if(currentTupleCounter <= predictWindowSize){
+        if(currentTupleCounter <= bufferSizeStart){
             //incremental aggregation
             return 1;
 //        }else if(currentTupleCounter == predictWindowSize){
             //send partial result
 //            return 2;
-        }else if(currentTupleCounter < predictWindowSize + bufferSize){
+        }else if(currentTupleCounter <= predictWindowSize + bufferSizeStart){
             //send tuples
             return 3;
-        }else if(currentTupleCounter >= predictWindowSize + bufferSize){
+        }else if(currentTupleCounter <= predictWindowSize + bufferSizeStart + bufferSizeEnd){
             //send frequencies
             return 4;
-        }else{
+        }else if(currentTupleCounter > predictWindowSize + bufferSizeStart + bufferSizeEnd){
             //stop processing
             return 5;
+        }else{
+            return 6;
         }
     }
 
@@ -145,25 +149,32 @@ public class OptimizerCount implements Runnable{
     private void processWindow(Tuple tuple, int isEventHere) {
         //optimizer can calculate all the queries.
         switch (isEventHere){
-            //1 processing
+            //previous buffer
             case 1:{
-                calculate(tuple, localWindow);
-                localWindow.partialResultTupleList.add(tuple);
+                localWindow.bufferTupleListStart.add(tuple);
                 break;
             }
             //2 end the window and send results
             case 3:{
-                localWindow.bufferTupleList.add(tuple);
+                calculate(tuple, localWindow);
+                localWindow.partialResultTupleList.add(tuple);
+
                 break;
             }
-            case 4 : {
+            //end buffer
+            case 4:{
+                localWindow.bufferTupleListEnd.add(tuple);
+                break;
+            }
+            case 5 : {
 //               calculate(tuple, localWindow);
                 MessageToRoot messageToRoot = new MessageToRoot();
                 messageToRoot.setMessageType(5);
                 messageToRoot.count = localWindow.count;
                 messageToRoot.result = localWindow.result;
                 messageToRoot.windowId = localWindow.getLocalWindowCounter();
-                messageToRoot.bufferTupleList = localWindow.bufferTupleList;
+                messageToRoot.bufferTupleListStart = localWindow.bufferTupleListStart;
+                messageToRoot.bufferTupleListEnd = localWindow.bufferTupleListEnd;
                 messageToRoot.eventRate = inputStream.getEventRates();
                 messageToRootQueue.offer(messageToRoot);
 
@@ -216,32 +227,46 @@ public class OptimizerCount implements Runnable{
     void checkForCorrection(){
         while(stepFlag == 1){
             if(!messageToLocalQueue.isEmpty()){
+                stepFlag = 3;
                 MessageToLocal messageToLocal = messageToLocalQueue.poll();
                 //local window size or Correction
                 if(messageToLocal.getMessageType() == 3) {
-                    this.predictWindowSize = messageToLocal.localWindowSize - messageToLocal.correctionFactor;
-                    this.bufferSize = 2 * messageToLocal.correctionFactor;
+                    this.predictWindowSize = Math.abs(messageToLocal.localWindowSize - 2 * messageToLocal.correctionFactor);
+                    this.bufferSizeStart = messageToLocal.correctionFactor;
+                    this.bufferSizeEnd = messageToLocal.correctionFactor;
 
                     localWindow.count = 0;
                     localWindow.result = 0;
                     localWindow.partialResultTupleList = new ArrayList<Tuple>((int) this.predictWindowSize);
-                    localWindow.bufferTupleList = new ArrayList<Tuple>((int)this.bufferSize);
+                    localWindow.bufferTupleListStart = new ArrayList<Tuple>((int)this.bufferSizeStart);
+                    localWindow.bufferTupleListEnd = new ArrayList<Tuple>((int)this.bufferSizeEnd);
                     //move to calculation step
                     stepFlag = 3;
                 }else if(messageToLocal.getMessageType() == 6){
-                    this.predictWindowSize = messageToLocal.localWindowSize - messageToLocal.correctionFactor;
-                    this.bufferSize = 2 * messageToLocal.correctionFactor;
+                    this.predictWindowSize = Math.abs(messageToLocal.localWindowSize - 2 * messageToLocal.correctionFactor);
+                    this.bufferSizeStart = messageToLocal.correctionFactor;
+                    this.bufferSizeEnd = messageToLocal.correctionFactor;
 
+                    dataQueue.offer(localBuffer);
+                    localBuffer = new ArrayList<>();
                     localWindow.count = 0;
                     localWindow.result = 0;
-                    dataQueue.offer(localWindow.partialResultTupleList);
-                    dataQueue.offer(localWindow.bufferTupleList);
                     localWindow.partialResultTupleList = new ArrayList<Tuple>((int) this.predictWindowSize);
-                    localWindow.bufferTupleList = new ArrayList<Tuple>((int)this.bufferSize);
+                    localWindow.bufferTupleListStart = new ArrayList<Tuple>((int)this.bufferSizeStart);
+                    localWindow.bufferTupleListEnd = new ArrayList<Tuple>((int)this.bufferSizeEnd);
                     //move to calculation step
-                    stepFlag = 3;
                 }
+            }else{
+                //for test
+//                localBuffer.addAll(localWindow.partialResultTupleList);
+//                localBuffer.addAll(localWindow.bufferTupleListStart);
+//                localBuffer.addAll(localWindow.bufferTupleListEnd);
+                localWindow.partialResultTupleList = new ArrayList<Tuple>((int) this.predictWindowSize);
+                localWindow.bufferTupleListStart = new ArrayList<Tuple>((int)this.bufferSizeStart);
+                localWindow.bufferTupleListEnd = new ArrayList<Tuple>((int)this.bufferSizeEnd);
+                stepFlag = 3;
             }
+
         }
     }
 
@@ -277,8 +302,9 @@ public class OptimizerCount implements Runnable{
                 MessageToLocal messageToLocal = messageToLocalQueue.poll();
                 //local window size
                 if(messageToLocal.getMessageType() == 3) {
-                    this.predictWindowSize = messageToLocal.localWindowSize - messageToLocal.correctionFactor;
-                    this.bufferSize = 2 * messageToLocal.correctionFactor;
+                    this.predictWindowSize = Math.abs(messageToLocal.localWindowSize - 2 * messageToLocal.correctionFactor);
+                    this.bufferSizeStart = messageToLocal.correctionFactor;
+                    this.bufferSizeEnd = messageToLocal.correctionFactor;
                     //move to calculation step
                     stepFlag = 3;
                 }

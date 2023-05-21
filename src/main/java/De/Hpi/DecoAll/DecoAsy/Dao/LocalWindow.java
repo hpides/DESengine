@@ -11,11 +11,10 @@ public class LocalWindow{
     //buffer
     public ArrayList<Tuple> partialResultTupleList;
     //buffer
-    public ArrayList<Tuple> bufferTupleList;
+    public ArrayList<Tuple> bufferTupleListStart;
     //for fixed slice
-    public ArrayList<Tuple> fixedTupleList;
-    //for unfixed slice
-    public ArrayList<Tuple> unfixedTupleList;
+    public ArrayList<Tuple> bufferTupleListEnd;
+
 
     //intermediate result
     public double result;

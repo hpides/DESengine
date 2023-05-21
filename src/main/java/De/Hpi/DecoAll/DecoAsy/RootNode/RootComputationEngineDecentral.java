@@ -119,7 +119,8 @@ public class RootComputationEngineDecentral implements Runnable {
                             if (partialResult.getNodeId() == messageToRoot.getNodeId() && partialResult.counterForStep == 0) {
                                 partialResult.count = messageToRoot.count;
                                 partialResult.result = messageToRoot.result;
-                                partialResult.bufferTupleList = messageToRoot.bufferTupleList;
+                                partialResult.bufferTupleListStart = messageToRoot.bufferTupleListStart;
+                                partialResult.bufferTupleListEnd = messageToRoot.bufferTupleListEnd;
                                 partialResult.eventRate = messageToRoot.eventRate;
                                 partialResult.counterForStep = 1;
                                 localPartialResultsCounter++;
@@ -343,9 +344,10 @@ public class RootComputationEngineDecentral implements Runnable {
 
     void calculateBuffer(PartialResult partialResult, Finalresult finalresult, int bufferSize){
         //this is only for test
-        int index = Math.min(bufferSize, partialResult.bufferTupleList.size());
+        partialResult.bufferTupleListStart.addAll(partialResult.bufferTupleListEnd);
+        int index = Math.min(bufferSize, partialResult.bufferTupleListStart.size());
         for(int i = 0; i < index; i++) {
-            Tuple tuple = partialResult.bufferTupleList.get(i);
+            Tuple tuple = partialResult.bufferTupleListStart.get(i);
             switch (query.getFunction()) {
                 case Configuration.COUNT: {
                     finalresult.count ++;

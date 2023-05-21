@@ -7,7 +7,8 @@ public class PartialResult {
     private int nodeId;
     public long count;
     public double result;
-    public ArrayList<Tuple> bufferTupleList;
+    public ArrayList<Tuple> bufferTupleListStart;
+    public ArrayList<Tuple> bufferTupleListEnd;
     public int counterForStep;
     public double eventRate;
 

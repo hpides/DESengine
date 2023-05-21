@@ -5,7 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="857ef140-6a94-4b5e-ac19-bcc9a070667f" name="Changes" comment="DecoAsy">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/DecoResults/all.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/results/DecoResults/all.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/De/Hpi/DecoAll/DecoAsy/Dao/LocalWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/De/Hpi/DecoAll/DecoAsy/Dao/LocalWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/De/Hpi/DecoAll/DecoAsy/Dao/PartialResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/De/Hpi/DecoAll/DecoAsy/Dao/PartialResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/De/Hpi/DecoAll/DecoAsy/LocalNode/LocalPublishMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/De/Hpi/DecoAll/DecoAsy/LocalNode/LocalPublishMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/De/Hpi/DecoAll/DecoAsy/LocalNode/OptimizerCount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/De/Hpi/DecoAll/DecoAsy/LocalNode/OptimizerCount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/De/Hpi/DecoAll/DecoAsy/Message/MessageToRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/De/Hpi/DecoAll/DecoAsy/Message/MessageToRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/De/Hpi/DecoAll/DecoAsy/RootNode/RootComputationEngineDecentral.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/De/Hpi/DecoAll/DecoAsy/RootNode/RootComputationEngineDecentral.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +87,7 @@
       <recent name="De.Hpi.DesisSW.Configure" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.OverallMainDriverTest (2)">
+  <component name="RunManager" selected="Application.OverallMainDriverTest (3)">
     <configuration name="OverallMainDriverTest (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="De.Hpi.DecoAll.Deco.Test.OverallMainDriverTest" />
       <module name="DESengine" />
@@ -100,6 +107,19 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="De.Hpi.DecoAll.DecoSy.Test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OverallMainDriverTest (3)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="De.Hpi.DecoAll.DecoAsy.Test.OverallMainDriverTest" />
+      <module name="DESengine" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="De.Hpi.DecoAll.DecoAsy.Test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -133,19 +153,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="De.Hpi.Test.TestGenerator" />
-      <module name="DESengine" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="De.Hpi.Test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="TestNewGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="De.Hpi.DecoAll.Debuffer.Test.TestNewGenerator" />
       <module name="DESengine" />
@@ -172,18 +179,18 @@
     </configuration>
     <list>
       <item itemvalue="Application.OverallMainDriverTest" />
-      <item itemvalue="Application.TestGenerator" />
       <item itemvalue="Application.TestNewGenerator" />
       <item itemvalue="Application.OverallMainDriverTest (1)" />
       <item itemvalue="Application.OverallMainDriverTest (2)" />
+      <item itemvalue="Application.OverallMainDriverTest (3)" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.OverallMainDriverTest (3)" />
         <item itemvalue="Application.OverallMainDriverTest (2)" />
         <item itemvalue="Application.OverallMainDriverTest (1)" />
         <item itemvalue="Application.OverallMainDriverTest" />
         <item itemvalue="Application.TestNewGenerator" />
-        <item itemvalue="Application.TestGenerator" />
       </list>
     </recent_temporary>
   </component>
@@ -195,13 +202,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1648324852412</updated>
-    </task>
-    <task id="LOCAL-00020" summary="Refactor">
-      <created>1648788755964</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1648788755964</updated>
     </task>
     <task id="LOCAL-00021" summary="Refactor">
       <created>1648788891867</created>
@@ -539,7 +539,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684245815770</updated>
     </task>
-    <option name="localTasksCounter" value="69" />
+    <task id="LOCAL-00069" summary="DecoAsy">
+      <created>1684245891678</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1684245891678</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

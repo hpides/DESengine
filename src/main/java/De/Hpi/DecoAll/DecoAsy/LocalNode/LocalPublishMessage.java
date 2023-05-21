@@ -89,8 +89,9 @@ public class LocalPublishMessage implements Runnable{
 //                                        + "  GCTime:  " + getGarbageCollectionTime()
 //                                        + "  GC/Time:  " + (double) getGarbageCollectionTime() / (endtime - begintime)
                                 );
-                                if(messageToRoot.bufferTupleList != null)
-                                    System.out.println("  size:  " + messageToRoot.bufferTupleList.size());
+                                if(messageToRoot.bufferTupleListStart != null && messageToRoot.bufferTupleListEnd != null )
+                                    System.out.println("  sizeStart:  " + messageToRoot.bufferTupleListStart.size());
+                                    System.out.println("  sizeEnd:  " + messageToRoot.bufferTupleListEnd.size());
 
                             }
                         }
