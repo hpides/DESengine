@@ -13,26 +13,26 @@ pio.kaleido.scope.mathjax = None
 fig = go.Figure()
 
 fig.add_trace(go.Bar(name="CeBuffer", x=["CeBuffer"], y=[1450000], legendrank=1, width=[0.8]
-                     , text="<b>251<b>"
-                     , textposition='outside', textfont = dict(size = 25)
+                     , text="251"
+                     , textposition='outside', textfont = dict(size = 35)
                      , marker_color=config.central))
 fig.add_trace(go.Bar(name="Disco", x=["Disco"], y=[459361], legendrank=2, width=[0.8]
-                     , text="<b>0.459<b>"
-                     , textposition='outside', textfont = dict(size = 25)
+                     , text="0.459"
+                     , textposition='outside', textfont = dict(size = 35)
                      , marker_color=config.disco))
 fig.add_trace(go.Bar(name="Scotty", x=["Scotty"], y=[341152], legendrank=3, width=[0.8]
-                     , text="<b>0.341<b>"
-                     , textposition='outside', textfont = dict(size = 25)
+                     , text="0.341"
+                     , textposition='outside', textfont = dict(size = 35)
                      , marker_color=config.scotty))
 fig.add_trace(go.Bar(name="Desis", x=["Desis"], y=[137256], legendrank=4, width=[0.8]
-                     , text="<b>0.137<b>"
-                     , textposition='outside', textfont = dict(size = 25)
+                     , text="0.137"
+                     , textposition='outside', textfont = dict(size = 35)
                      , marker_color=config.desis))
 # fig.add_trace(go.Bar(name="DesisSw", x=[" "], y=[30545075.4], legendrank=4, width=[0.18]
 #                      , marker_line_color='rgb(255,161,90)', marker_pattern_shape="-"))
 # fig.update_traces(marker_color='rgb(158,202,225)', marker_line_color='rgb(8,48,107)', marker_line_width=1.5, opacity=0.6)
 
-
+# text = "<b>0.459<b>"
 #legend
 fig.update_layout(showlegend=False)
 fig.update_layout(
@@ -50,7 +50,7 @@ fig.update_layout(
     #     ),
     # ),
     yaxis=dict(
-        title_text="latency in ms",
+        title_text="Latency in ms",
         titlefont=dict(size=35),
         ticks="inside",
         ticklen=20,
@@ -97,7 +97,7 @@ fig.update_yaxes(showline=True, linewidth=3, linecolor='black'#, mirror=True
                  , tickfont=dict(size=35))
 # fig.update_yaxes(showgrid=True, gridwidth=1, gridcolor='rgb(120,120,120)')
 # ,tickfont_family="Arial Black"
-
+# fig.update_layout(font_family="Cambria")
 fig.show()
 if not os.path.exists("E:\my paper\DesisPaper\Desis-Optimizing-Decentralized-Window-Aggregation\experiment\s1"):
     os.mkdir("E:\my paper\DesisPaper\Desis-Optimizing-Decentralized-Window-Aggregation\experiment\s1")

@@ -13,20 +13,20 @@ pio.kaleido.scope.mathjax = None
 fig = go.Figure()
 
 fig.add_trace(go.Bar(name="CeBuffer", x=["CeBuffer"], y=[1450000], legendrank=1, width=[0.8]
-                     , text="<b>251<b>"
-                     , textposition='outside', textfont = dict(size = 25)
+                     , text="251"
+                     , textposition='outside', textfont = dict(size = 35)
                      , marker_color=config.central))
 fig.add_trace(go.Bar(name="Disco", x=["Disco"], y=[471724.1498], legendrank=2, width=[0.8]
-                     , text="<b>0.471<b>"
-                     , textposition='outside', textfont = dict(size = 25)
+                     , text="0.471"
+                     , textposition='outside', textfont = dict(size = 35)
                      , marker_color=config.disco))
 fig.add_trace(go.Bar(name="Scotty", x=["Scotty"], y=[341152], legendrank=3, width=[0.8]
-                     , text="<b>0.341<b>"
-                     , textposition='outside', textfont = dict(size = 25)
+                     , text="0.341"
+                     , textposition='outside', textfont = dict(size = 35)
                      , marker_color=config.scotty))
 fig.add_trace(go.Bar(name="Desis", x=["Desis"], y=[174553.72], legendrank=4, width=[0.8]
-                     , text="<b>0.175<b>"
-                     , textposition='outside', textfont = dict(size = 25)
+                     , text="0.175"
+                     , textposition='outside', textfont = dict(size = 35)
                      , marker_color=config.desis))
 # fig.add_trace(go.Bar(name="DesisSw", x=[" "], y=[30545075.4], legendrank=4, width=[0.18]
 #                      , marker_line_color='rgb(255,161,90)', marker_pattern_shape="-"))
@@ -50,7 +50,7 @@ fig.update_layout(
     #     ),
     # ),
     yaxis=dict(
-        title_text="latency in ms",
+        title_text="Latency in ms",
         titlefont=dict(size=35),
         ticks="inside",
         ticklen=20,

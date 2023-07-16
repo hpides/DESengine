@@ -40,17 +40,17 @@ fig.update_layout(
         yanchor="top",
         y=1.2,
         xanchor="left",
-        x=-0.05,
+        x=-0.2,
         # bordercolor="Black",
         # borderwidth=2,
         # bgcolor="white",
         font=dict(
-            size=23,
+            size=30,
             color="black"
         ),
     ),
     yaxis=dict(
-        title_text="slices in min",
+        title_text="Slices in min",
         titlefont=dict(size=35),
         exponentformat="e",
         # ticktext=["0", "5k", "10k", "15k", "20k", "30k", "40k"],
@@ -64,7 +64,7 @@ fig.update_layout(
         type="log",
     ),
     xaxis=dict(
-        title_text="concurrent windows",
+        title_text="Concurrent Windows",
         titlefont=dict(size=35),
         ticktext=["2","10", '10<sup>2<sup>', "10<sup>3<sup>"],
         tickvals=[2, 10, 100, 1000],

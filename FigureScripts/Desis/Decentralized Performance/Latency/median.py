@@ -18,16 +18,16 @@ widthAll=[widthSin]
 
 fig = go.Figure()
 
-fig.add_trace(go.Bar(name="local", x=windowType, y=[0, 0, 600179, 116681]
+fig.add_trace(go.Bar(name="Local", x=windowType, y=[0, 0, 600179, 116681]
                      , legendrank=1, width=widthAll
                      # , text="<b>2.98GB<b>", textposition='outside', textfont = dict(size = 25)
-                     , marker_color=config.central))
-fig.add_trace(go.Bar(name="intermediate", x=windowType, y=[0, 0, 11012987, 6018705]
+                     , marker_line_width=0, marker_color=config.central))
+fig.add_trace(go.Bar(name="Intermediate", x=windowType, y=[0, 0, 11012987, 6018705]
                      , legendrank=2, width=widthAll
-                     , marker_color=config.disco))
-fig.add_trace(go.Bar(name="root", x=windowType, y=[28000000, 5601264, 6195624, 5464357]
+                     , marker_line_width=0, marker_color=config.disco))
+fig.add_trace(go.Bar(name="Root", x=windowType, y=[28000000, 5601264, 6195624, 5464357]
                      , legendrank=2, width=widthAll
-                     , marker_color=config.desis))
+                     , marker_line_width=0, marker_color=config.desis))
 
 
 
@@ -49,7 +49,7 @@ fig.update_layout(
         ),
     ),
     yaxis=dict(
-        title_text="latency in ms",
+        title_text="Latency in ms",
         titlefont=dict(size=35),
         ticks="inside",
         ticklen=20,

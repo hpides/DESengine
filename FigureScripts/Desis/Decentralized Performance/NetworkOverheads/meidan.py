@@ -21,11 +21,11 @@ fig = go.Figure()
 fig.add_trace(go.Bar(name="Local", x=windowType, y=[1.491,  1.491, 1.6764, 1.491]
                      , legendrank=1, width=widthAll
                      # , text="<b>2.98GB<b>", textposition='outside', textfont = dict(size = 25)
-                     , marker_color=config.central))
+                     , marker_line_width=0, marker_color=config.central))
 fig.add_trace(go.Bar(name="Intermediate", x=windowType, y=[1.491,  1.491, 1.6764, 1.491]
                      , legendrank=2, width=widthAll
-                     , text=["<b>2.98GB<b>","<b>2.98GB<b>","<b>3.35GB<b>","<b>2.98GB<b>"], textposition='outside', textfont = dict(size = 25)
-                     , marker_color=config.disco))
+                     , text=["2.98GB","2.98GB","3.35GB","2.98GB"], textposition='outside', textfont = dict(size = 35)
+                     , marker_line_width=0, marker_color=config.disco))
 
 
 #legend
@@ -45,7 +45,7 @@ fig.update_layout(
         ),
     ),
     yaxis=dict(
-        title_text="bytes sent by events",
+        title_text="Bytes Sent",
         titlefont=dict(size=35),
         ticktext=["0", "1GB", "2GB", "3GB", "4GB"],
         tickvals=[0, 1, 2, 3, 4],
@@ -83,7 +83,7 @@ fig.update_layout(
 fig.update_layout(barmode='stack', bargap=0.15, bargroupgap=0.0)
 
 fig.update_xaxes(showline=True, linewidth=3, linecolor='black'#, mirror=True
-                 , tickfont=dict(size=25))
+                 , tickfont=dict(size=30))
 fig.update_yaxes(showline=True, linewidth=3, linecolor='black'#, mirror=True
                  , tickfont=dict(size=35))
 # fig.update_yaxes(showgrid=True, gridwidth=1, gridcolor='rgb(120,120,120)')

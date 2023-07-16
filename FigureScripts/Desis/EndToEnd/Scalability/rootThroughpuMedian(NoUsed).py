@@ -41,7 +41,7 @@ fig.update_layout(
         ),
     ),
     yaxis=dict(
-        title_text="events/sec",
+        title_text="Events/sec",
         titlefont=dict(size=35),
         exponentformat="e",
         ticktext=["0", "4M", "8M", "12M", "16M"],
@@ -54,7 +54,7 @@ fig.update_layout(
         # tickwidth =5,
     ),
     xaxis=dict(
-        title_text="local nodes",
+        title_text="Local Nodes",
         titlefont=dict(size=35),
         ticktext=["2","10", '10<sup>2<sup>', "10<sup>3<sup>"],
         tickvals=[2, 10, 100, 1000],

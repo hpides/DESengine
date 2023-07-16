@@ -39,17 +39,17 @@ fig.update_layout(
         yanchor="top",
         y=1.2,
         xanchor="left",
-        x=-0.05,
+        x=-0.2,
         # bordercolor="Black",
         # borderwidth=2,
         # bgcolor="white",
         font=dict(
-            size=23,
+            size=30,
             color="black"
         ),
     ),
     yaxis=dict(
-        title_text="latency in ns",
+        title_text="Latency in ns",
         titlefont=dict(size=35),
         ticktext=["1", "10<sup>3 <sup> ", '10<sup>6 <sup> ', "10<sup>9 <sup> ", "10<sup>12<sup>"],
         tickvals=[1, 1000, 1000000, 1000000000, 1000000000000],
@@ -61,7 +61,7 @@ fig.update_layout(
         tickfont=dict(size=35),
     ),
     xaxis=dict(
-        title_text="slices in window",
+        title_text="Slices in Window",
         titlefont=dict(size=35),
         ticktext=["1", "10", '10<sup>2<sup>', "10<sup>3<sup>", "10<sup>4<sup>" , "10<sup>5<sup>"],
         tickvals=[1, 10, 100, 1000, 10000, 100000],

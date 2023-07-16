@@ -42,12 +42,12 @@ fig.update_layout(
         # borderwidth=2,
         # bgcolor="white",
         font=dict(
-            size=23,
+            size=30,
             color="black"
         ),
     ),
     yaxis=dict(
-        title_text="bytes sent by events",
+        title_text="Bytes Sent",
         titlefont=dict(size=35),
         ticktext=["1B", "1KB", '1MB', "1GB"],
         tickvals=[1, 1000, 1000000, 1000000000],
@@ -59,7 +59,7 @@ fig.update_layout(
         tickfont=dict(size=35),
     ),
     xaxis=dict(
-        title_text="distinct keys",
+        title_text="Distinct Keys",
         titlefont=dict(size=35),
         ticktext=["1","10", '10<sup>2<sup>', "10<sup>3<sup>"],
         tickvals=[1, 10, 100, 1000],

@@ -41,12 +41,12 @@ fig.update_layout(
         # borderwidth=2,
         # bgcolor="white",
         font=dict(
-            size=23,
+            size=35,
             color="black"
         ),
     ),
     yaxis=dict(
-        title_text="events/sec",
+        title_text="Events/sec",
         titlefont=dict(size=35),
         exponentformat="e",
         ticktext=["0", "40M", "80M", "120M", "160M", "200M", "240M"],
@@ -60,7 +60,7 @@ fig.update_layout(
     ),
 
     xaxis=dict(
-        title_text="local nodes",
+        title_text="Local Nodes",
         titlefont=dict(size=35),
         ticktext=["1", "2", "3", "4", "5", "6", "7", "8"],
         tickvals=[1, 2, 3, 4, 5, 6, 7, 8],

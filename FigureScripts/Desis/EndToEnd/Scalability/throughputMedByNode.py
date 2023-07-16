@@ -13,13 +13,13 @@ pio.kaleido.scope.mathjax = None
 fig = go.Figure()
 
 fig.add_trace(go.Bar(name="Root", x=["Root"], y=[7441958], legendrank=1, width=[0.8]
-                     , text="<b>7.44M<b>", textposition='outside', textfont = dict(size = 25)
+                     , text="7.44M", textposition='outside', textfont = dict(size = 35)
                      , marker_color=config.desis))
 fig.add_trace(go.Bar(name="Intermediate", x=["Intermediate"], y=[16301088.86], legendrank=2, width=[0.8]
-                     , text="<b>16.23<b>", textposition='outside', textfont = dict(size = 25)
+                     , text="16.23", textposition='outside', textfont = dict(size = 35)
                      , marker_color=config.disco))
 fig.add_trace(go.Bar(name="Local", x=["Local"], y=[7361659.16], legendrank=4, width=[0.8]
-                     , text="<b>7.36M<b>", textposition='outside', textfont = dict(size = 25)
+                     , text="7.36M", textposition='outside', textfont = dict(size = 35)
                      , marker_color=config.central))
 # fig.add_trace(go.Bar(name="DesisSw", x=[" "], y=[30545075.4], legendrank=4, width=[0.18]
 #                      , marker_line_color='rgb(255,161,90)', marker_pattern_shape="-"))
@@ -43,8 +43,8 @@ fig.update_layout(
     #     ),
     # ),
     yaxis=dict(
-        title_text="events(pre-results)/sec",
-        titlefont=dict(size=30),
+        title_text="Events(Results)/sec",
+        titlefont=dict(size=35),
         exponentformat="e",
         ticktext=["0", "3M", "6M", "9M", "12M", "15M", "18M"],
         tickvals=[0, 3000000, 6000000, 9000000, 12000000, 15000000, 18000000],

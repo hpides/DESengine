@@ -20,10 +20,10 @@ fig.add_trace(go.Scatter(name="Disco", x=[1, 2, 10, 50, 100, 500, 1000], mode='l
                          , y=[2181646, 2181646, 2124146.77, 2071365.54, 2032837.087, 2058517.16, 2092535.16]
                          , line=dict(color=config.disco, width=5), marker=dict(size=20, symbol='square')))
 fig.add_trace(go.Scatter(name="Scotty", x=[1, 2, 10, 50, 100, 500, 1000], mode='lines+markers'
-                         , y=[4949573, 4914225, 4959514, 4980528, 4905299, 4848050]
+                         , y=[4959514, 4949573, 4914225, 4959514, 4980528, 4905299, 4848050]
                          , line=dict(color=config.scotty, width=5), marker=dict(size=20, symbol='triangle-up')))
 fig.add_trace(go.Scatter(name="Desis", x=[1, 2, 10, 50, 100, 500, 1000], mode='lines+markers'
-                         , y=[27994913.27, 28125758.52, 28112445.21, 27729286.49, 27241076.42, 27143901.65]
+                         , y=[28112445.21, 27994913.27, 28125758.52, 28112445.21, 27729286.49, 27241076.42, 27143901.65]
                          , line=dict(color=config.desis, width=5), marker=dict(size=20, symbol='cross')))
 # fig.add_trace(go.Scatter(xaxis='x2'))
 # fig.update_traces(marker_color='rgb(158,202,225)', marker_line_color='rgb(8,48,107)', marker_line_width=1.5, opacity=0.6,
@@ -44,12 +44,12 @@ fig.update_layout(
         # borderwidth=2,
         # bgcolor="white",
         font=dict(
-            size=23,
+            size=35,
             color="black"
         ),
     ),
     yaxis=dict(
-        title_text="events/sec",
+        title_text="Events/sec",
         titlefont=dict(size=35),
         exponentformat="e",
         ticktext=["0", "5M", "10M", "15M", "20M", "25M", "30M"],
@@ -62,7 +62,7 @@ fig.update_layout(
         # tickwidth =5,
     ),
     xaxis=dict(
-        title_text="concurrent windows",
+        title_text="Concurrent Windows",
         titlefont=dict(size=35),
         ticktext=["1","10", '10<sup>2<sup>', "10<sup>3<sup>"],
         tickvals=[1, 10, 100, 1000],
@@ -107,6 +107,7 @@ fig.update_xaxes(showline=True, linewidth=3, linecolor='black'#, mirror=True
 fig.update_yaxes(showline=True, linewidth=3, linecolor='black'#, mirror=True
                  )
 fig.update_yaxes(showgrid=True, gridwidth=1, gridcolor='rgb(120,120,120)')
+# fig.update_layout(font_family="Cambria")
 fig.show()
 if not os.path.exists("E:\my paper\DesisPaper\Desis-Optimizing-Decentralized-Window-Aggregation\experiment\s1"):
     os.mkdir("E:\my paper\DesisPaper\Desis-Optimizing-Decentralized-Window-Aggregation\experiment\s1")
