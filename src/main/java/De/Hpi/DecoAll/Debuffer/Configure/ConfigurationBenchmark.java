@@ -11,5 +11,4 @@ public interface ConfigurationBenchmark {
     //the frequency of outputting benchmark, default 2000
     public static final int BenchMarkDebugFrequency = 0;
 
-
 }
