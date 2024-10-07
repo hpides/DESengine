@@ -8,7 +8,8 @@ Desis is a hierarchical system that can be deployed into decentralized networks.
 
 Deco is also a decentralized approach that is based on Desis. Deco can move calcuations of count-based windows from centers to the local nodes.
 
-#Dema
+ #Dema
+
 Dema is a decentralized window aggregation approach that mainly focus on time-based windows with decomposable function.
 
 # Approach Introduction:
