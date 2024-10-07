@@ -8,11 +8,16 @@ Desis is a hierarchical system that can be deployed into decentralized networks.
 
 Deco is also a decentralized approach that is based on Desis. Deco can move calcuations of count-based windows from centers to the local nodes.
 
+#Dema
+Dema is a decentralized window aggregation approach that mainly focus on time-based windows with decomposable function.
+
 # Approach Introduction:
 - Desis
     - decentralized aggregation and share results between windows
 - Deco
     - decentralized aggregation and supports count-based windows    
+- Deco
+    - decentralized aggregation and supports non-decomposable functions, e.g., median and quantile
 - Scotty
     - implemented by the `Scotty`
 - Disco 
@@ -42,7 +47,7 @@ Deco is also a decentralized approach that is based on Desis. Deco can move calc
 
 # Input
 
-- Desis
+- Desis/Deco/Dema
   - Node Id: 
     - The id of the node that is deployed with Desis.
   - Query Number: 
@@ -52,12 +57,3 @@ Deco is also a decentralized approach that is based on Desis. Deco can move calc
   - Generator Thread Number: 
     - How many generator threads are initialized. One thread can produce at least 10 million tuples/s.
 
-- Deco
-  - Node Id:
-    - The id of the node that is deployed with Desis.
-  - Local Nodes:
-    - How many local nodes. 
-  - Query Modes:
-    - The query mode is to choose the query pattern that is set into query generation file.
-  - Generator Thread Number:
-    - How many generator threads are initialized. One thread can produce at least 10 million tuples/s.
