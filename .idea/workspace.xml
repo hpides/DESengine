@@ -5,7 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="857ef140-6a94-4b5e-ac19-bcc9a070667f" name="Changes" comment="DecoAsy">
+      <change afterPath="$PROJECT_DIR$/results/DemaResults/all.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/De/Hpi/Test/TestRedset.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/De/Hpi/Test/TestforRedset.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/De/Hpi/Test/TestforSnowest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,19 +59,19 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/De/Hpi/DecoAll/DecoAsy" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/results/DemaResults" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\DESengine\results\DemaResults" />
       <recent name="E:\DESengine\src\main\java\De\Hpi\DecoAll\DecoAsy" />
       <recent name="E:\DESengine\src\main\java\De\Hpi\DecoAll\DecoSy" />
       <recent name="E:\DESengine\src\main\java\De\Hpi\DecoAll\Deco" />
       <recent name="E:\project\src\main\java\De\Hpi\Deco" />
-      <recent name="E:\project\src\main\java\De\Hpi\DesisSW\Generator" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\DESengine\src\main\java\De\Hpi\Test" />
@@ -80,7 +85,7 @@
       <recent name="De.Hpi.DesisSW.Configure" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.OverallMainDriverTest (3)">
+  <component name="RunManager" selected="Application.TestforRedset">
     <configuration name="OverallMainDriverTest (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="De.Hpi.DecoAll.Deco.Test.OverallMainDriverTest" />
       <module name="DESengine" />
@@ -121,19 +126,6 @@
       </method>
     </configuration>
     <configuration name="OverallMainDriverTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="De.Hpi.DecoAll.Debuffer.Test.OverallMainDriverTest" />
-      <module name="DESengine" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="De.Hpi.DecoAll.Debuffer.Test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="OverallMainDriverTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="De.Hpi.DesisAll.DesisMultipleKeys.Test.OverallMainDriverTest" />
       <module name="DESengine" />
       <extension name="coverage">
@@ -146,12 +138,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestNewGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="De.Hpi.DecoAll.Debuffer.Test.TestNewGenerator" />
+    <configuration name="TestforRedset" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="De.Hpi.Test.TestforRedset" />
       <module name="DESengine" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="De.Hpi.DecoAll.Debuffer.Test.*" />
+          <option name="PATTERN" value="De.Hpi.Test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestforSnowest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="De.Hpi.Test.TestforSnowest" />
+      <module name="DESengine" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="De.Hpi.Test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -171,19 +176,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.OverallMainDriverTest" />
-      <item itemvalue="Application.TestNewGenerator" />
       <item itemvalue="Application.OverallMainDriverTest (1)" />
       <item itemvalue="Application.OverallMainDriverTest (2)" />
       <item itemvalue="Application.OverallMainDriverTest (3)" />
+      <item itemvalue="Application.OverallMainDriverTest" />
+      <item itemvalue="Application.TestforRedset" />
+      <item itemvalue="Application.TestforSnowest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TestforRedset" />
+        <item itemvalue="Application.TestforSnowest" />
         <item itemvalue="Application.OverallMainDriverTest (3)" />
         <item itemvalue="Application.OverallMainDriverTest (2)" />
         <item itemvalue="Application.OverallMainDriverTest (1)" />
-        <item itemvalue="Application.OverallMainDriverTest" />
-        <item itemvalue="Application.TestNewGenerator" />
       </list>
     </recent_temporary>
   </component>
