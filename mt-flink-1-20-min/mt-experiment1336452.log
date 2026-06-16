@@ -1,0 +1,57 @@
+Starting cluster.
+Starting standalonesession daemon on host cx03.
+Starting taskexecutor daemon on host cx03.
+Script has working directory /sc/home/magnus.menger
+Experiment #0/3
+Configuration: {'data_generator.data_source': 'Debs2013', 'benchmark.operator': 'Baseline', 'query_generator.max_parallelism': 1000, 'query_generator.ending_per_batch': 100}
+Configuration file: /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1760016188489.yml
+
+Running command: /sc/home/magnus.menger/repos/mt-flink-1-20/flink-1.20.2/bin/flink run /sc/home/magnus.menger/repos/mt-flink-1-20/target/mt-flink-1-20-1.0-SNAPSHOT-fat.jar /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1760016188489.yml
+STDOUT:
+ Job has been submitted with JobID b433075cfc9276a46ac8792e880bc786
+Program execution finished
+Job with JobID b433075cfc9276a46ac8792e880bc786 has finished.
+Job Runtime: 306588 ms
+
+
+STDERR:
+ 
+
+-------
+
+Experiment #1/3
+Configuration: {'data_generator.data_source': 'Debs2013', 'benchmark.operator': 'AStream', 'query_generator.max_parallelism': 1000, 'query_generator.ending_per_batch': 100}
+Configuration file: /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1760016500509.yml
+
+Running command: /sc/home/magnus.menger/repos/mt-flink-1-20/flink-1.20.2/bin/flink run /sc/home/magnus.menger/repos/mt-flink-1-20/target/mt-flink-1-20-1.0-SNAPSHOT-fat.jar /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1760016500509.yml
+STDOUT:
+ Job has been submitted with JobID cebd3790829dfc376d99c7432480b278
+Program execution finished
+Job with JobID cebd3790829dfc376d99c7432480b278 has finished.
+Job Runtime: 300869 ms
+
+
+STDERR:
+ 
+
+-------
+
+Experiment #2/3
+Configuration: {'data_generator.data_source': 'Debs2013', 'benchmark.operator': 'Optimized', 'query_generator.max_parallelism': 1000, 'query_generator.ending_per_batch': 100, 'query_generator.aggregations': ['min', 'max', 'count', 'sum', 'avg_shared']}
+Configuration file: /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1760016806502.yml
+
+Running command: /sc/home/magnus.menger/repos/mt-flink-1-20/flink-1.20.2/bin/flink run /sc/home/magnus.menger/repos/mt-flink-1-20/target/mt-flink-1-20-1.0-SNAPSHOT-fat.jar /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1760016806502.yml
+STDOUT:
+ Job has been submitted with JobID 1b53f95721ba6d9525cd5f54bb5de344
+Program execution finished
+Job with JobID 1b53f95721ba6d9525cd5f54bb5de344 has finished.
+Job Runtime: 305689 ms
+
+
+STDERR:
+ 
+
+-------
+
+Stopping taskexecutor daemon (pid: 136873) on host cx03.
+Stopping standalonesession daemon (pid: 136307) on host cx03.

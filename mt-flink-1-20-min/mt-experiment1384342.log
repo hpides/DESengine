@@ -1,0 +1,1468 @@
+Starting cluster.
+Starting standalonesession daemon on host cx11.
+Starting taskexecutor daemon on host cx11.
+Script has working directory /sc/home/magnus.menger
+Experiment #0/86
+Configuration: {'benchmark.operator': 'Baseline', 'query_generator.max_parallelism': 1, 'query_generator.ending_per_batch': 0}
+Configuration file: /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761041331051.yml
+
+Running command: /sc/home/magnus.menger/repos/mt-flink-1-20/flink-1.20.2/bin/flink run /sc/home/magnus.menger/repos/mt-flink-1-20/target/mt-flink-1-20-1.0-SNAPSHOT-fat.jar /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761041331051.yml
+STDOUT:
+ Job has been submitted with JobID 330fc2c8274b2aab51542a58e1039f2c
+Program execution finished
+Job with JobID 330fc2c8274b2aab51542a58e1039f2c has finished.
+Job Runtime: 304718 ms
+
+
+STDERR:
+ 
+
+-------
+
+Experiment #1/86
+Configuration: {'benchmark.operator': 'AStream', 'query_generator.max_parallelism': 1, 'query_generator.ending_per_batch': 0}
+Configuration file: /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761041641877.yml
+
+Running command: /sc/home/magnus.menger/repos/mt-flink-1-20/flink-1.20.2/bin/flink run /sc/home/magnus.menger/repos/mt-flink-1-20/target/mt-flink-1-20-1.0-SNAPSHOT-fat.jar /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761041641877.yml
+STDOUT:
+ Job has been submitted with JobID 7b70be41c99461be64a22a4b3da6ad80
+Program execution finished
+Job with JobID 7b70be41c99461be64a22a4b3da6ad80 has finished.
+Job Runtime: 392187 ms
+
+
+STDERR:
+ 
+
+-------
+
+Experiment #2/86
+Configuration: {'benchmark.operator': 'Optimized', 'query_generator.max_parallelism': 1, 'query_generator.ending_per_batch': 0}
+Configuration file: /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761042039461.yml
+
+Running command: /sc/home/magnus.menger/repos/mt-flink-1-20/flink-1.20.2/bin/flink run /sc/home/magnus.menger/repos/mt-flink-1-20/target/mt-flink-1-20-1.0-SNAPSHOT-fat.jar /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761042039461.yml
+STDOUT:
+ Job has been submitted with JobID a0fcdd93304999da5ff58a1f0dd18fcd
+Program execution finished
+Job with JobID a0fcdd93304999da5ff58a1f0dd18fcd has finished.
+Job Runtime: 303150 ms
+
+
+STDERR:
+ 
+
+-------
+
+Experiment #3/86
+Configuration: {'benchmark.operator': 'Optimized', 'query_generator.max_parallelism': 1, 'query_generator.ending_per_batch': 0, 'query_generator.aggregations': ['min', 'max', 'count', 'sum', 'avg_shared']}
+Configuration file: /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761042346646.yml
+
+Running command: /sc/home/magnus.menger/repos/mt-flink-1-20/flink-1.20.2/bin/flink run /sc/home/magnus.menger/repos/mt-flink-1-20/target/mt-flink-1-20-1.0-SNAPSHOT-fat.jar /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761042346646.yml
+STDOUT:
+ Job has been submitted with JobID e22a3a4ae5909270e35b45408eb29000
+Program execution finished
+Job with JobID e22a3a4ae5909270e35b45408eb29000 has finished.
+Job Runtime: 327039 ms
+
+
+STDERR:
+ 
+
+-------
+
+Experiment #4/86
+Configuration: {'benchmark.operator': 'Baseline', 'query_generator.max_parallelism': 50, 'query_generator.ending_per_batch': 5}
+Configuration file: /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761042677865.yml
+
+Running command: /sc/home/magnus.menger/repos/mt-flink-1-20/flink-1.20.2/bin/flink run /sc/home/magnus.menger/repos/mt-flink-1-20/target/mt-flink-1-20-1.0-SNAPSHOT-fat.jar /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761042677865.yml
+STDOUT:
+ Job has been submitted with JobID 82d0dd6fca58f64209fdf26b51f7323f
+Program execution finished
+Job with JobID 82d0dd6fca58f64209fdf26b51f7323f has finished.
+Job Runtime: 383665 ms
+
+
+STDERR:
+ 
+
+-------
+
+Experiment #5/86
+Configuration: {'benchmark.operator': 'AStream', 'query_generator.max_parallelism': 50, 'query_generator.ending_per_batch': 5}
+Configuration file: /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761043065395.yml
+
+Running command: /sc/home/magnus.menger/repos/mt-flink-1-20/flink-1.20.2/bin/flink run /sc/home/magnus.menger/repos/mt-flink-1-20/target/mt-flink-1-20-1.0-SNAPSHOT-fat.jar /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761043065395.yml
+STDOUT:
+ Job has been submitted with JobID ca704e8d872b904438d9e69e58548fe4
+Program execution finished
+Job with JobID ca704e8d872b904438d9e69e58548fe4 has finished.
+Job Runtime: 425564 ms
+
+
+STDERR:
+ 
+
+-------
+
+Experiment #6/86
+Configuration: {'benchmark.operator': 'Optimized', 'query_generator.max_parallelism': 50, 'query_generator.ending_per_batch': 5}
+Configuration file: /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761043495072.yml
+
+Running command: /sc/home/magnus.menger/repos/mt-flink-1-20/flink-1.20.2/bin/flink run /sc/home/magnus.menger/repos/mt-flink-1-20/target/mt-flink-1-20-1.0-SNAPSHOT-fat.jar /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761043495072.yml
+STDOUT:
+ Job has been submitted with JobID a17114c13f5158296683a488d07761b5
+Program execution finished
+Job with JobID a17114c13f5158296683a488d07761b5 has finished.
+Job Runtime: 300154 ms
+
+
+STDERR:
+ 
+
+-------
+
+Experiment #7/86
+Configuration: {'benchmark.operator': 'Optimized', 'query_generator.max_parallelism': 50, 'query_generator.ending_per_batch': 5, 'query_generator.aggregations': ['min', 'max', 'count', 'sum', 'avg_shared']}
+Configuration file: /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761043800123.yml
+
+Running command: /sc/home/magnus.menger/repos/mt-flink-1-20/flink-1.20.2/bin/flink run /sc/home/magnus.menger/repos/mt-flink-1-20/target/mt-flink-1-20-1.0-SNAPSHOT-fat.jar /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761043800123.yml
+STDOUT:
+ Job has been submitted with JobID b6bdacc6002dcf36b0baf1cfeb657587
+Program execution finished
+Job with JobID b6bdacc6002dcf36b0baf1cfeb657587 has finished.
+Job Runtime: 294884 ms
+
+
+STDERR:
+ 
+
+-------
+
+Experiment #8/86
+Configuration: {'benchmark.operator': 'Baseline', 'query_generator.max_parallelism': 200, 'query_generator.ending_per_batch': 20}
+Configuration file: /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761044099128.yml
+
+Running command: /sc/home/magnus.menger/repos/mt-flink-1-20/flink-1.20.2/bin/flink run /sc/home/magnus.menger/repos/mt-flink-1-20/target/mt-flink-1-20-1.0-SNAPSHOT-fat.jar /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761044099128.yml
+STDOUT:
+ Job has been submitted with JobID f3b910ebeb5f8ad16e0106f2da5fb775
+Program execution finished
+Job with JobID f3b910ebeb5f8ad16e0106f2da5fb775 has finished.
+Job Runtime: 346201 ms
+
+
+STDERR:
+ 
+
+-------
+
+Experiment #9/86
+Configuration: {'benchmark.operator': 'AStream', 'query_generator.max_parallelism': 200, 'query_generator.ending_per_batch': 20}
+Configuration file: /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761044450401.yml
+
+Running command: /sc/home/magnus.menger/repos/mt-flink-1-20/flink-1.20.2/bin/flink run /sc/home/magnus.menger/repos/mt-flink-1-20/target/mt-flink-1-20-1.0-SNAPSHOT-fat.jar /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761044450401.yml
+STDOUT:
+ Job has been submitted with JobID 644ec594f54149a667607c7975d86278
+Program execution finished
+Job with JobID 644ec594f54149a667607c7975d86278 has finished.
+Job Runtime: 326357 ms
+
+
+STDERR:
+ 
+
+-------
+
+Experiment #10/86
+Configuration: {'benchmark.operator': 'Optimized', 'query_generator.max_parallelism': 200, 'query_generator.ending_per_batch': 20}
+Configuration file: /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761044781694.yml
+
+Running command: /sc/home/magnus.menger/repos/mt-flink-1-20/flink-1.20.2/bin/flink run /sc/home/magnus.menger/repos/mt-flink-1-20/target/mt-flink-1-20-1.0-SNAPSHOT-fat.jar /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761044781694.yml
+STDOUT:
+ Job has been submitted with JobID b83c99dece2f7a95bb971df24787f968
+Program execution finished
+Job with JobID b83c99dece2f7a95bb971df24787f968 has finished.
+Job Runtime: 290044 ms
+
+
+STDERR:
+ 
+
+-------
+
+Experiment #11/86
+Configuration: {'benchmark.operator': 'Optimized', 'query_generator.max_parallelism': 200, 'query_generator.ending_per_batch': 20, 'query_generator.aggregations': ['min', 'max', 'count', 'sum', 'avg_shared']}
+Configuration file: /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761045076821.yml
+
+Running command: /sc/home/magnus.menger/repos/mt-flink-1-20/flink-1.20.2/bin/flink run /sc/home/magnus.menger/repos/mt-flink-1-20/target/mt-flink-1-20-1.0-SNAPSHOT-fat.jar /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761045076821.yml
+STDOUT:
+ Job has been submitted with JobID 6db70b3ad619a9f4f4e7d9c29ca889c9
+Program execution finished
+Job with JobID 6db70b3ad619a9f4f4e7d9c29ca889c9 has finished.
+Job Runtime: 287264 ms
+
+
+STDERR:
+ 
+
+-------
+
+Experiment #12/86
+Configuration: {'benchmark.operator': 'Baseline', 'query_generator.max_parallelism': 1000, 'query_generator.ending_per_batch': 100}
+Configuration file: /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761045368001.yml
+
+Running command: /sc/home/magnus.menger/repos/mt-flink-1-20/flink-1.20.2/bin/flink run /sc/home/magnus.menger/repos/mt-flink-1-20/target/mt-flink-1-20-1.0-SNAPSHOT-fat.jar /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761045368001.yml
+STDOUT:
+ Job has been submitted with JobID adc3a32ee660554835f0c9fd4a734097
+Program execution finished
+Job with JobID adc3a32ee660554835f0c9fd4a734097 has finished.
+Job Runtime: 402353 ms
+
+
+STDERR:
+ 
+
+-------
+
+Experiment #13/86
+Configuration: {'benchmark.operator': 'AStream', 'query_generator.max_parallelism': 1000, 'query_generator.ending_per_batch': 100}
+Configuration file: /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761045775409.yml
+
+Running command: /sc/home/magnus.menger/repos/mt-flink-1-20/flink-1.20.2/bin/flink run /sc/home/magnus.menger/repos/mt-flink-1-20/target/mt-flink-1-20-1.0-SNAPSHOT-fat.jar /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761045775409.yml
+STDOUT:
+ Job has been submitted with JobID ec07a9cc6526a2dc4a0d6a0397dd223c
+Program execution finished
+Job with JobID ec07a9cc6526a2dc4a0d6a0397dd223c has finished.
+Job Runtime: 352087 ms
+
+
+STDERR:
+ 
+
+-------
+
+Experiment #14/86
+Configuration: {'benchmark.operator': 'Optimized', 'query_generator.max_parallelism': 1000, 'query_generator.ending_per_batch': 100}
+Configuration file: /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761046132753.yml
+
+Running command: /sc/home/magnus.menger/repos/mt-flink-1-20/flink-1.20.2/bin/flink run /sc/home/magnus.menger/repos/mt-flink-1-20/target/mt-flink-1-20-1.0-SNAPSHOT-fat.jar /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761046132753.yml
+STDOUT:
+ Job has been submitted with JobID 87ea7a761a7b69585c7857d71f674340
+Program execution finished
+Job with JobID 87ea7a761a7b69585c7857d71f674340 has finished.
+Job Runtime: 397743 ms
+
+
+STDERR:
+ 
+
+-------
+
+Experiment #15/86
+Configuration: {'benchmark.operator': 'Optimized', 'query_generator.max_parallelism': 1000, 'query_generator.ending_per_batch': 100, 'query_generator.aggregations': ['min', 'max', 'count', 'sum', 'avg_shared']}
+Configuration file: /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761046534410.yml
+
+Running command: /sc/home/magnus.menger/repos/mt-flink-1-20/flink-1.20.2/bin/flink run /sc/home/magnus.menger/repos/mt-flink-1-20/target/mt-flink-1-20-1.0-SNAPSHOT-fat.jar /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761046534410.yml
+STDOUT:
+ Job has been submitted with JobID 480b5edd12bd4966b66e7108e2619ba5
+Program execution finished
+Job with JobID 480b5edd12bd4966b66e7108e2619ba5 has finished.
+Job Runtime: 337257 ms
+
+
+STDERR:
+ 
+
+-------
+
+Experiment #16/86
+Configuration: {'benchmark.operator': 'Baseline', 'query_generator.max_parallelism': 5000, 'query_generator.ending_per_batch': 500}
+Configuration file: /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761046875723.yml
+
+Running command: /sc/home/magnus.menger/repos/mt-flink-1-20/flink-1.20.2/bin/flink run /sc/home/magnus.menger/repos/mt-flink-1-20/target/mt-flink-1-20-1.0-SNAPSHOT-fat.jar /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761046875723.yml
+STDOUT:
+ Job has been submitted with JobID ccdb0f794c9ad2beff0643206b2eb359
+Program execution finished
+Job with JobID ccdb0f794c9ad2beff0643206b2eb359 has finished.
+Job Runtime: 384866 ms
+
+
+STDERR:
+ 
+
+-------
+
+Experiment #17/86
+Configuration: {'benchmark.operator': 'AStream', 'query_generator.max_parallelism': 5000, 'query_generator.ending_per_batch': 500}
+Configuration file: /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761047264984.yml
+
+Running command: /sc/home/magnus.menger/repos/mt-flink-1-20/flink-1.20.2/bin/flink run /sc/home/magnus.menger/repos/mt-flink-1-20/target/mt-flink-1-20-1.0-SNAPSHOT-fat.jar /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761047264984.yml
+STDOUT:
+ Job has been submitted with JobID 283588eed99f39e6f636742b799a939a
+Program execution finished
+Job with JobID 283588eed99f39e6f636742b799a939a has finished.
+Job Runtime: 393729 ms
+
+
+STDERR:
+ 
+
+-------
+
+Experiment #18/86
+Configuration: {'benchmark.operator': 'Optimized', 'query_generator.max_parallelism': 5000, 'query_generator.ending_per_batch': 500}
+Configuration file: /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761047664299.yml
+
+Running command: /sc/home/magnus.menger/repos/mt-flink-1-20/flink-1.20.2/bin/flink run /sc/home/magnus.menger/repos/mt-flink-1-20/target/mt-flink-1-20-1.0-SNAPSHOT-fat.jar /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761047664299.yml
+STDOUT:
+ Job has been submitted with JobID 866cd2feaf645ae40a2261f0903a17d6
+Program execution finished
+Job with JobID 866cd2feaf645ae40a2261f0903a17d6 has finished.
+Job Runtime: 597905 ms
+
+
+STDERR:
+ 
+
+-------
+
+Experiment #19/86
+Configuration: {'benchmark.operator': 'Optimized', 'query_generator.max_parallelism': 5000, 'query_generator.ending_per_batch': 500, 'query_generator.aggregations': ['min', 'max', 'count', 'sum', 'avg_shared']}
+Configuration file: /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761048266253.yml
+
+Running command: /sc/home/magnus.menger/repos/mt-flink-1-20/flink-1.20.2/bin/flink run /sc/home/magnus.menger/repos/mt-flink-1-20/target/mt-flink-1-20-1.0-SNAPSHOT-fat.jar /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761048266253.yml
+STDOUT:
+ Job has been submitted with JobID 8259cb07f2c04a3860538750484f443f
+Program execution finished
+Job with JobID 8259cb07f2c04a3860538750484f443f has finished.
+Job Runtime: 387117 ms
+
+
+STDERR:
+ 
+
+-------
+
+Experiment #20/86
+Configuration: {'benchmark.operator': 'Baseline', 'query_generator.filter_generation_mode': 'EquallySpacedOverlapping', 'query_generator.overlap_ratio': 0.0}
+Configuration file: /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761048657663.yml
+
+Running command: /sc/home/magnus.menger/repos/mt-flink-1-20/flink-1.20.2/bin/flink run /sc/home/magnus.menger/repos/mt-flink-1-20/target/mt-flink-1-20-1.0-SNAPSHOT-fat.jar /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761048657663.yml
+STDOUT:
+ Job has been submitted with JobID cfc70b00bef8c9f89e22b86a27044554
+Program execution finished
+Job with JobID cfc70b00bef8c9f89e22b86a27044554 has finished.
+Job Runtime: 378157 ms
+
+
+STDERR:
+ 
+
+-------
+
+Experiment #21/86
+Configuration: {'benchmark.operator': 'AStream', 'query_generator.filter_generation_mode': 'EquallySpacedOverlapping', 'query_generator.overlap_ratio': 0.0}
+Configuration file: /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761049041097.yml
+
+Running command: /sc/home/magnus.menger/repos/mt-flink-1-20/flink-1.20.2/bin/flink run /sc/home/magnus.menger/repos/mt-flink-1-20/target/mt-flink-1-20-1.0-SNAPSHOT-fat.jar /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761049041097.yml
+STDOUT:
+ Job has been submitted with JobID 453d4347624810521a18979f1635e8dd
+Program execution finished
+Job with JobID 453d4347624810521a18979f1635e8dd has finished.
+Job Runtime: 437119 ms
+
+
+STDERR:
+ 
+
+-------
+
+Experiment #22/86
+Configuration: {'benchmark.operator': 'Optimized', 'query_generator.filter_generation_mode': 'EquallySpacedOverlapping', 'query_generator.overlap_ratio': 0.0, 'query_generator.aggregations': ['min', 'max', 'count', 'sum', 'avg_shared']}
+Configuration file: /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761049482787.yml
+
+Running command: /sc/home/magnus.menger/repos/mt-flink-1-20/flink-1.20.2/bin/flink run /sc/home/magnus.menger/repos/mt-flink-1-20/target/mt-flink-1-20-1.0-SNAPSHOT-fat.jar /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761049482787.yml
+STDOUT:
+ Job has been submitted with JobID 729942943b1fba4b47e8aa633cdfb47e
+Program execution finished
+Job with JobID 729942943b1fba4b47e8aa633cdfb47e has finished.
+Job Runtime: 333210 ms
+
+
+STDERR:
+ 
+
+-------
+
+Experiment #23/86
+Configuration: {'benchmark.operator': 'Baseline', 'query_generator.filter_generation_mode': 'EquallySpacedOverlapping', 'query_generator.overlap_ratio': 0.1}
+Configuration file: /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761049819798.yml
+
+Running command: /sc/home/magnus.menger/repos/mt-flink-1-20/flink-1.20.2/bin/flink run /sc/home/magnus.menger/repos/mt-flink-1-20/target/mt-flink-1-20-1.0-SNAPSHOT-fat.jar /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761049819798.yml
+STDOUT:
+ Job has been submitted with JobID 7d5fd9f572f4f4fb7b787e5aec1c875c
+Program execution finished
+Job with JobID 7d5fd9f572f4f4fb7b787e5aec1c875c has finished.
+Job Runtime: 394962 ms
+
+
+STDERR:
+ 
+
+-------
+
+Experiment #24/86
+Configuration: {'benchmark.operator': 'AStream', 'query_generator.filter_generation_mode': 'EquallySpacedOverlapping', 'query_generator.overlap_ratio': 0.1}
+Configuration file: /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761050219170.yml
+
+Running command: /sc/home/magnus.menger/repos/mt-flink-1-20/flink-1.20.2/bin/flink run /sc/home/magnus.menger/repos/mt-flink-1-20/target/mt-flink-1-20-1.0-SNAPSHOT-fat.jar /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761050219170.yml
+STDOUT:
+ Job has been submitted with JobID e1cd7c54ff2ec9ea2494a23f45a42d57
+Program execution finished
+Job with JobID e1cd7c54ff2ec9ea2494a23f45a42d57 has finished.
+Job Runtime: 324277 ms
+
+
+STDERR:
+ 
+
+-------
+
+Experiment #25/86
+Configuration: {'benchmark.operator': 'Optimized', 'query_generator.filter_generation_mode': 'EquallySpacedOverlapping', 'query_generator.overlap_ratio': 0.1, 'query_generator.aggregations': ['min', 'max', 'count', 'sum', 'avg_shared']}
+Configuration file: /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761050548378.yml
+
+Running command: /sc/home/magnus.menger/repos/mt-flink-1-20/flink-1.20.2/bin/flink run /sc/home/magnus.menger/repos/mt-flink-1-20/target/mt-flink-1-20-1.0-SNAPSHOT-fat.jar /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761050548378.yml
+STDOUT:
+ Job has been submitted with JobID 1679bf11bb8b5e1dd06a5bf9acca8981
+Program execution finished
+Job with JobID 1679bf11bb8b5e1dd06a5bf9acca8981 has finished.
+Job Runtime: 391689 ms
+
+
+STDERR:
+ 
+
+-------
+
+Experiment #26/86
+Configuration: {'benchmark.operator': 'Baseline', 'query_generator.filter_generation_mode': 'EquallySpacedOverlapping', 'query_generator.overlap_ratio': 0.25}
+Configuration file: /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761050943847.yml
+
+Running command: /sc/home/magnus.menger/repos/mt-flink-1-20/flink-1.20.2/bin/flink run /sc/home/magnus.menger/repos/mt-flink-1-20/target/mt-flink-1-20-1.0-SNAPSHOT-fat.jar /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761050943847.yml
+STDOUT:
+ Job has been submitted with JobID e50d0055de29f4b61169f30463b26e0e
+Program execution finished
+Job with JobID e50d0055de29f4b61169f30463b26e0e has finished.
+Job Runtime: 376140 ms
+
+
+STDERR:
+ 
+
+-------
+
+Experiment #27/86
+Configuration: {'benchmark.operator': 'AStream', 'query_generator.filter_generation_mode': 'EquallySpacedOverlapping', 'query_generator.overlap_ratio': 0.25}
+Configuration file: /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761051325183.yml
+
+Running command: /sc/home/magnus.menger/repos/mt-flink-1-20/flink-1.20.2/bin/flink run /sc/home/magnus.menger/repos/mt-flink-1-20/target/mt-flink-1-20-1.0-SNAPSHOT-fat.jar /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761051325183.yml
+STDOUT:
+ Job has been submitted with JobID f2b739df7273707ca5afa1b9f5eb4ebb
+Program execution finished
+Job with JobID f2b739df7273707ca5afa1b9f5eb4ebb has finished.
+Job Runtime: 351758 ms
+
+
+STDERR:
+ 
+
+-------
+
+Experiment #28/86
+Configuration: {'benchmark.operator': 'Optimized', 'query_generator.filter_generation_mode': 'EquallySpacedOverlapping', 'query_generator.overlap_ratio': 0.25, 'query_generator.aggregations': ['min', 'max', 'count', 'sum', 'avg_shared']}
+Configuration file: /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761051682452.yml
+
+Running command: /sc/home/magnus.menger/repos/mt-flink-1-20/flink-1.20.2/bin/flink run /sc/home/magnus.menger/repos/mt-flink-1-20/target/mt-flink-1-20-1.0-SNAPSHOT-fat.jar /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761051682452.yml
+STDOUT:
+ Job has been submitted with JobID d46e4b59fbb760dead9b66e43c565235
+Program execution finished
+Job with JobID d46e4b59fbb760dead9b66e43c565235 has finished.
+Job Runtime: 309262 ms
+
+
+STDERR:
+ 
+
+-------
+
+Experiment #29/86
+Configuration: {'benchmark.operator': 'Baseline', 'query_generator.filter_generation_mode': 'EquallySpacedOverlapping', 'query_generator.overlap_ratio': 0.5}
+Configuration file: /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761051995752.yml
+
+Running command: /sc/home/magnus.menger/repos/mt-flink-1-20/flink-1.20.2/bin/flink run /sc/home/magnus.menger/repos/mt-flink-1-20/target/mt-flink-1-20-1.0-SNAPSHOT-fat.jar /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761051995752.yml
+STDOUT:
+ Job has been submitted with JobID 81d71ddce72f8244161b4dd2787b4401
+Program execution finished
+Job with JobID 81d71ddce72f8244161b4dd2787b4401 has finished.
+Job Runtime: 370282 ms
+
+
+STDERR:
+ 
+
+-------
+
+Experiment #30/86
+Configuration: {'benchmark.operator': 'AStream', 'query_generator.filter_generation_mode': 'EquallySpacedOverlapping', 'query_generator.overlap_ratio': 0.5}
+Configuration file: /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761052371114.yml
+
+Running command: /sc/home/magnus.menger/repos/mt-flink-1-20/flink-1.20.2/bin/flink run /sc/home/magnus.menger/repos/mt-flink-1-20/target/mt-flink-1-20-1.0-SNAPSHOT-fat.jar /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761052371114.yml
+STDOUT:
+ Job has been submitted with JobID cb3a1a6afd1f7a75070b966f8559994a
+Program execution finished
+Job with JobID cb3a1a6afd1f7a75070b966f8559994a has finished.
+Job Runtime: 345460 ms
+
+
+STDERR:
+ 
+
+-------
+
+Experiment #31/86
+Configuration: {'benchmark.operator': 'Optimized', 'query_generator.filter_generation_mode': 'EquallySpacedOverlapping', 'query_generator.overlap_ratio': 0.5, 'query_generator.aggregations': ['min', 'max', 'count', 'sum', 'avg_shared']}
+Configuration file: /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761052720319.yml
+
+Running command: /sc/home/magnus.menger/repos/mt-flink-1-20/flink-1.20.2/bin/flink run /sc/home/magnus.menger/repos/mt-flink-1-20/target/mt-flink-1-20-1.0-SNAPSHOT-fat.jar /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761052720319.yml
+STDOUT:
+ Job has been submitted with JobID 4ab5a6c23254c180bae15f08a7e8a757
+Program execution finished
+Job with JobID 4ab5a6c23254c180bae15f08a7e8a757 has finished.
+Job Runtime: 667758 ms
+
+
+STDERR:
+ 
+
+-------
+
+Experiment #32/86
+Configuration: {'benchmark.operator': 'Baseline', 'query_generator.filter_generation_mode': 'EquallySpacedOverlapping', 'query_generator.overlap_ratio': 0.75}
+Configuration file: /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761053393288.yml
+
+Running command: /sc/home/magnus.menger/repos/mt-flink-1-20/flink-1.20.2/bin/flink run /sc/home/magnus.menger/repos/mt-flink-1-20/target/mt-flink-1-20-1.0-SNAPSHOT-fat.jar /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761053393288.yml
+STDOUT:
+ Job has been submitted with JobID 9a8dfb6833e1d031969df9ab834d0459
+Program execution finished
+Job with JobID 9a8dfb6833e1d031969df9ab834d0459 has finished.
+Job Runtime: 386838 ms
+
+
+STDERR:
+ 
+
+-------
+
+Experiment #33/86
+Configuration: {'benchmark.operator': 'AStream', 'query_generator.filter_generation_mode': 'EquallySpacedOverlapping', 'query_generator.overlap_ratio': 0.75}
+Configuration file: /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761053784880.yml
+
+Running command: /sc/home/magnus.menger/repos/mt-flink-1-20/flink-1.20.2/bin/flink run /sc/home/magnus.menger/repos/mt-flink-1-20/target/mt-flink-1-20-1.0-SNAPSHOT-fat.jar /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761053784880.yml
+STDOUT:
+ Job has been submitted with JobID ead27174cc75a7e6f1592baa52baee5d
+Program execution finished
+Job with JobID ead27174cc75a7e6f1592baa52baee5d has finished.
+Job Runtime: 379456 ms
+
+
+STDERR:
+ 
+
+-------
+
+Experiment #34/86
+Configuration: {'benchmark.operator': 'Optimized', 'query_generator.filter_generation_mode': 'EquallySpacedOverlapping', 'query_generator.overlap_ratio': 0.75, 'query_generator.aggregations': ['min', 'max', 'count', 'sum', 'avg_shared']}
+Configuration file: /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761054168219.yml
+
+Running command: /sc/home/magnus.menger/repos/mt-flink-1-20/flink-1.20.2/bin/flink run /sc/home/magnus.menger/repos/mt-flink-1-20/target/mt-flink-1-20-1.0-SNAPSHOT-fat.jar /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761054168219.yml
+STDOUT:
+ Job has been submitted with JobID bc73cbe1ff58af2059b9a80f02e40406
+Program execution finished
+Job with JobID bc73cbe1ff58af2059b9a80f02e40406 has finished.
+Job Runtime: 304148 ms
+
+
+STDERR:
+ 
+
+-------
+
+Experiment #35/86
+Configuration: {'benchmark.operator': 'Baseline', 'query_generator.filter_generation_mode': 'EquallySpacedOverlapping', 'query_generator.overlap_ratio': 1.0}
+Configuration file: /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761054477356.yml
+
+Running command: /sc/home/magnus.menger/repos/mt-flink-1-20/flink-1.20.2/bin/flink run /sc/home/magnus.menger/repos/mt-flink-1-20/target/mt-flink-1-20-1.0-SNAPSHOT-fat.jar /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761054477356.yml
+STDOUT:
+ Job has been submitted with JobID d1dfc538e0a7d37ef1c655d603b09e2a
+Program execution finished
+Job with JobID d1dfc538e0a7d37ef1c655d603b09e2a has finished.
+Job Runtime: 380237 ms
+
+
+STDERR:
+ 
+
+-------
+
+Experiment #36/86
+Configuration: {'benchmark.operator': 'AStream', 'query_generator.filter_generation_mode': 'EquallySpacedOverlapping', 'query_generator.overlap_ratio': 1.0}
+Configuration file: /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761054862801.yml
+
+Running command: /sc/home/magnus.menger/repos/mt-flink-1-20/flink-1.20.2/bin/flink run /sc/home/magnus.menger/repos/mt-flink-1-20/target/mt-flink-1-20-1.0-SNAPSHOT-fat.jar /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761054862801.yml
+STDOUT:
+ Job has been submitted with JobID 0c1eeeb1cf926124489db6493ee489c9
+Program execution finished
+Job with JobID 0c1eeeb1cf926124489db6493ee489c9 has finished.
+Job Runtime: 351629 ms
+
+
+STDERR:
+ 
+
+-------
+
+Experiment #37/86
+Configuration: {'benchmark.operator': 'Optimized', 'query_generator.filter_generation_mode': 'EquallySpacedOverlapping', 'query_generator.overlap_ratio': 1.0, 'query_generator.aggregations': ['min', 'max', 'count', 'sum', 'avg_shared']}
+Configuration file: /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761055220177.yml
+
+Running command: /sc/home/magnus.menger/repos/mt-flink-1-20/flink-1.20.2/bin/flink run /sc/home/magnus.menger/repos/mt-flink-1-20/target/mt-flink-1-20-1.0-SNAPSHOT-fat.jar /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761055220177.yml
+STDOUT:
+ Job has been submitted with JobID 389a2640d34b7163f73fd36387ec3463
+Program execution finished
+Job with JobID 389a2640d34b7163f73fd36387ec3463 has finished.
+Job Runtime: 287482 ms
+
+
+STDERR:
+ 
+
+-------
+
+Experiment #38/86
+Configuration: {'benchmark.operator': 'Baseline', 'query_generator.different_filters': 50}
+Configuration file: /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761055513221.yml
+
+Running command: /sc/home/magnus.menger/repos/mt-flink-1-20/flink-1.20.2/bin/flink run /sc/home/magnus.menger/repos/mt-flink-1-20/target/mt-flink-1-20-1.0-SNAPSHOT-fat.jar /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761055513221.yml
+STDOUT:
+ Job has been submitted with JobID 9734c4770a732ee807dcad5f56065b50
+Program execution finished
+Job with JobID 9734c4770a732ee807dcad5f56065b50 has finished.
+Job Runtime: 370507 ms
+
+
+STDERR:
+ 
+
+-------
+
+Experiment #39/86
+Configuration: {'benchmark.operator': 'AStream', 'query_generator.different_filters': 50}
+Configuration file: /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761055888533.yml
+
+Running command: /sc/home/magnus.menger/repos/mt-flink-1-20/flink-1.20.2/bin/flink run /sc/home/magnus.menger/repos/mt-flink-1-20/target/mt-flink-1-20-1.0-SNAPSHOT-fat.jar /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761055888533.yml
+STDOUT:
+ Job has been submitted with JobID 9c8d29589996a76ec01fd36148e496c2
+Program execution finished
+Job with JobID 9c8d29589996a76ec01fd36148e496c2 has finished.
+Job Runtime: 376608 ms
+
+
+STDERR:
+ 
+
+-------
+
+Experiment #40/86
+Configuration: {'benchmark.operator': 'Optimized', 'query_generator.different_filters': 50, 'query_generator.aggregations': ['min', 'max', 'count', 'sum', 'avg_shared']}
+Configuration file: /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761056269808.yml
+
+Running command: /sc/home/magnus.menger/repos/mt-flink-1-20/flink-1.20.2/bin/flink run /sc/home/magnus.menger/repos/mt-flink-1-20/target/mt-flink-1-20-1.0-SNAPSHOT-fat.jar /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761056269808.yml
+STDOUT:
+ Job has been submitted with JobID 0572487e1f7912749220b701adc1d348
+Program execution finished
+Job with JobID 0572487e1f7912749220b701adc1d348 has finished.
+Job Runtime: 334817 ms
+
+
+STDERR:
+ 
+
+-------
+
+Experiment #41/86
+Configuration: {'benchmark.operator': 'Baseline', 'query_generator.different_filters': 200}
+Configuration file: /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761056608984.yml
+
+Running command: /sc/home/magnus.menger/repos/mt-flink-1-20/flink-1.20.2/bin/flink run /sc/home/magnus.menger/repos/mt-flink-1-20/target/mt-flink-1-20-1.0-SNAPSHOT-fat.jar /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761056608984.yml
+STDOUT:
+ Job has been submitted with JobID 932e727a7dbc2a74c76128b1d2cc5a69
+Program execution finished
+Job with JobID 932e727a7dbc2a74c76128b1d2cc5a69 has finished.
+Job Runtime: 444507 ms
+
+
+STDERR:
+ 
+
+-------
+
+Experiment #42/86
+Configuration: {'benchmark.operator': 'AStream', 'query_generator.different_filters': 200}
+Configuration file: /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761057058315.yml
+
+Running command: /sc/home/magnus.menger/repos/mt-flink-1-20/flink-1.20.2/bin/flink run /sc/home/magnus.menger/repos/mt-flink-1-20/target/mt-flink-1-20-1.0-SNAPSHOT-fat.jar /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761057058315.yml
+STDOUT:
+ Job has been submitted with JobID c1941f72236d01ba9ba6b267515c9d21
+Program execution finished
+Job with JobID c1941f72236d01ba9ba6b267515c9d21 has finished.
+Job Runtime: 527421 ms
+
+
+STDERR:
+ 
+
+-------
+
+Experiment #43/86
+Configuration: {'benchmark.operator': 'Optimized', 'query_generator.different_filters': 200, 'query_generator.aggregations': ['min', 'max', 'count', 'sum', 'avg_shared']}
+Configuration file: /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761057590068.yml
+
+Running command: /sc/home/magnus.menger/repos/mt-flink-1-20/flink-1.20.2/bin/flink run /sc/home/magnus.menger/repos/mt-flink-1-20/target/mt-flink-1-20-1.0-SNAPSHOT-fat.jar /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761057590068.yml
+STDOUT:
+ Job has been submitted with JobID 543fcf950680b27b266c3852c7ef4354
+Program execution finished
+Job with JobID 543fcf950680b27b266c3852c7ef4354 has finished.
+Job Runtime: 297269 ms
+
+
+STDERR:
+ 
+
+-------
+
+Experiment #44/86
+Configuration: {'benchmark.operator': 'Baseline', 'query_generator.different_aggregations': 1}
+Configuration file: /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761057891176.yml
+
+Running command: /sc/home/magnus.menger/repos/mt-flink-1-20/flink-1.20.2/bin/flink run /sc/home/magnus.menger/repos/mt-flink-1-20/target/mt-flink-1-20-1.0-SNAPSHOT-fat.jar /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761057891176.yml
+STDOUT:
+ Job has been submitted with JobID ea2bed2058e32dc2410d78224802eff1
+Program execution finished
+Job with JobID ea2bed2058e32dc2410d78224802eff1 has finished.
+Job Runtime: 360028 ms
+
+
+STDERR:
+ 
+
+-------
+
+Experiment #45/86
+Configuration: {'benchmark.operator': 'AStream', 'query_generator.different_aggregations': 1}
+Configuration file: /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761058256476.yml
+
+Running command: /sc/home/magnus.menger/repos/mt-flink-1-20/flink-1.20.2/bin/flink run /sc/home/magnus.menger/repos/mt-flink-1-20/target/mt-flink-1-20-1.0-SNAPSHOT-fat.jar /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761058256476.yml
+STDOUT:
+ Job has been submitted with JobID e3b6a6347094f6c8c682cb019ac10e19
+Program execution finished
+Job with JobID e3b6a6347094f6c8c682cb019ac10e19 has finished.
+Job Runtime: 368344 ms
+
+
+STDERR:
+ 
+
+-------
+
+Experiment #46/86
+Configuration: {'benchmark.operator': 'Optimized', 'query_generator.different_aggregations': 1, 'query_generator.aggregations': ['min', 'max', 'count', 'sum', 'avg_shared']}
+Configuration file: /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761058629892.yml
+
+Running command: /sc/home/magnus.menger/repos/mt-flink-1-20/flink-1.20.2/bin/flink run /sc/home/magnus.menger/repos/mt-flink-1-20/target/mt-flink-1-20-1.0-SNAPSHOT-fat.jar /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761058629892.yml
+STDOUT:
+ Job has been submitted with JobID 4b44099703dd402e1417bef2fb7e76b2
+Program execution finished
+Job with JobID 4b44099703dd402e1417bef2fb7e76b2 has finished.
+Job Runtime: 401086 ms
+
+
+STDERR:
+ 
+
+-------
+
+Experiment #47/86
+Configuration: {'benchmark.operator': 'Baseline', 'query_generator.different_aggregations': 5}
+Configuration file: /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761059035208.yml
+
+Running command: /sc/home/magnus.menger/repos/mt-flink-1-20/flink-1.20.2/bin/flink run /sc/home/magnus.menger/repos/mt-flink-1-20/target/mt-flink-1-20-1.0-SNAPSHOT-fat.jar /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761059035208.yml
+STDOUT:
+ Job has been submitted with JobID 1ea61cff681139f2870bf902504e3f7f
+Program execution finished
+Job with JobID 1ea61cff681139f2870bf902504e3f7f has finished.
+Job Runtime: 454993 ms
+
+
+STDERR:
+ 
+
+-------
+
+Experiment #48/86
+Configuration: {'benchmark.operator': 'AStream', 'query_generator.different_aggregations': 5}
+Configuration file: /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761059494872.yml
+
+Running command: /sc/home/magnus.menger/repos/mt-flink-1-20/flink-1.20.2/bin/flink run /sc/home/magnus.menger/repos/mt-flink-1-20/target/mt-flink-1-20-1.0-SNAPSHOT-fat.jar /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761059494872.yml
+STDOUT:
+ Job has been submitted with JobID b712a7f389b7d387d9d746efe22fd7e3
+Program execution finished
+Job with JobID b712a7f389b7d387d9d746efe22fd7e3 has finished.
+Job Runtime: 369732 ms
+
+
+STDERR:
+ 
+
+-------
+
+Experiment #49/86
+Configuration: {'benchmark.operator': 'Optimized', 'query_generator.different_aggregations': 5, 'query_generator.aggregations': ['min', 'max', 'count', 'sum', 'avg_shared']}
+Configuration file: /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761059870232.yml
+
+Running command: /sc/home/magnus.menger/repos/mt-flink-1-20/flink-1.20.2/bin/flink run /sc/home/magnus.menger/repos/mt-flink-1-20/target/mt-flink-1-20-1.0-SNAPSHOT-fat.jar /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761059870232.yml
+STDOUT:
+ Job has been submitted with JobID a0e513076d28e2d9a0782ae6b1976e6c
+Program execution finished
+Job with JobID a0e513076d28e2d9a0782ae6b1976e6c has finished.
+Job Runtime: 288855 ms
+
+
+STDERR:
+ 
+
+-------
+
+Experiment #50/86
+Configuration: {'benchmark.operator': 'Baseline', 'query_generator.different_aggregations': 15}
+Configuration file: /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761060163400.yml
+
+Running command: /sc/home/magnus.menger/repos/mt-flink-1-20/flink-1.20.2/bin/flink run /sc/home/magnus.menger/repos/mt-flink-1-20/target/mt-flink-1-20-1.0-SNAPSHOT-fat.jar /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761060163400.yml
+STDOUT:
+ Job has been submitted with JobID 8c46326b217be23f0e9b50d5c1b5c4e8
+Program execution finished
+Job with JobID 8c46326b217be23f0e9b50d5c1b5c4e8 has finished.
+Job Runtime: 508256 ms
+
+
+STDERR:
+ 
+
+-------
+
+Experiment #51/86
+Configuration: {'benchmark.operator': 'AStream', 'query_generator.different_aggregations': 15}
+Configuration file: /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761060676862.yml
+
+Running command: /sc/home/magnus.menger/repos/mt-flink-1-20/flink-1.20.2/bin/flink run /sc/home/magnus.menger/repos/mt-flink-1-20/target/mt-flink-1-20-1.0-SNAPSHOT-fat.jar /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761060676862.yml
+STDOUT:
+ Job has been submitted with JobID b1c1f394237d7de1586005ca821353fc
+Program execution finished
+Job with JobID b1c1f394237d7de1586005ca821353fc has finished.
+Job Runtime: 474403 ms
+
+
+STDERR:
+ 
+
+-------
+
+Experiment #52/86
+Configuration: {'benchmark.operator': 'Optimized', 'query_generator.different_aggregations': 15, 'query_generator.aggregations': ['min', 'max', 'count', 'sum', 'avg_shared']}
+Configuration file: /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761061156406.yml
+
+Running command: /sc/home/magnus.menger/repos/mt-flink-1-20/flink-1.20.2/bin/flink run /sc/home/magnus.menger/repos/mt-flink-1-20/target/mt-flink-1-20-1.0-SNAPSHOT-fat.jar /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761061156406.yml
+STDOUT:
+ Job has been submitted with JobID a5f0d98bde0d8a880cc70e08cfa0c007
+Program execution finished
+Job with JobID a5f0d98bde0d8a880cc70e08cfa0c007 has finished.
+Job Runtime: 462418 ms
+
+
+STDERR:
+ 
+
+-------
+
+Experiment #53/86
+Configuration: {'benchmark.operator': 'Baseline', 'data_generator.synthetic_field_count': 10}
+Configuration file: /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761061623921.yml
+
+Running command: /sc/home/magnus.menger/repos/mt-flink-1-20/flink-1.20.2/bin/flink run /sc/home/magnus.menger/repos/mt-flink-1-20/target/mt-flink-1-20-1.0-SNAPSHOT-fat.jar /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761061623921.yml
+STDOUT:
+ Job has been submitted with JobID 354387bdd4d915dd4c2f6db40987c3c3
+Program execution finished
+Job with JobID 354387bdd4d915dd4c2f6db40987c3c3 has finished.
+Job Runtime: 427997 ms
+
+
+STDERR:
+ 
+
+-------
+
+Experiment #54/86
+Configuration: {'benchmark.operator': 'AStream', 'data_generator.synthetic_field_count': 10}
+Configuration file: /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761062057317.yml
+
+Running command: /sc/home/magnus.menger/repos/mt-flink-1-20/flink-1.20.2/bin/flink run /sc/home/magnus.menger/repos/mt-flink-1-20/target/mt-flink-1-20-1.0-SNAPSHOT-fat.jar /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761062057317.yml
+STDOUT:
+ Job has been submitted with JobID 09cb4590c56ce4cd616c56b22f49aac8
+Program execution finished
+Job with JobID 09cb4590c56ce4cd616c56b22f49aac8 has finished.
+Job Runtime: 360040 ms
+
+
+STDERR:
+ 
+
+-------
+
+Experiment #55/86
+Configuration: {'benchmark.operator': 'Optimized', 'data_generator.synthetic_field_count': 10, 'query_generator.aggregations': ['min', 'max', 'count', 'sum', 'avg_shared']}
+Configuration file: /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761062422641.yml
+
+Running command: /sc/home/magnus.menger/repos/mt-flink-1-20/flink-1.20.2/bin/flink run /sc/home/magnus.menger/repos/mt-flink-1-20/target/mt-flink-1-20-1.0-SNAPSHOT-fat.jar /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761062422641.yml
+STDOUT:
+ Job has been submitted with JobID ff55a5849845de328d527dcee89bfcc1
+Program execution finished
+Job with JobID ff55a5849845de328d527dcee89bfcc1 has finished.
+Job Runtime: 399727 ms
+
+
+STDERR:
+ 
+
+-------
+
+Experiment #56/86
+Configuration: {'benchmark.operator': 'Baseline', 'data_generator.synthetic_field_count': 20}
+Configuration file: /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761062828089.yml
+
+Running command: /sc/home/magnus.menger/repos/mt-flink-1-20/flink-1.20.2/bin/flink run /sc/home/magnus.menger/repos/mt-flink-1-20/target/mt-flink-1-20-1.0-SNAPSHOT-fat.jar /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761062828089.yml
+STDOUT:
+ Job has been submitted with JobID b731a089c1911e10cf1bda085e061870
+Program execution finished
+Job with JobID b731a089c1911e10cf1bda085e061870 has finished.
+Job Runtime: 370252 ms
+
+
+STDERR:
+ 
+
+-------
+
+Experiment #57/86
+Configuration: {'benchmark.operator': 'AStream', 'data_generator.synthetic_field_count': 20}
+Configuration file: /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761063203478.yml
+
+Running command: /sc/home/magnus.menger/repos/mt-flink-1-20/flink-1.20.2/bin/flink run /sc/home/magnus.menger/repos/mt-flink-1-20/target/mt-flink-1-20-1.0-SNAPSHOT-fat.jar /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761063203478.yml
+STDOUT:
+ Job has been submitted with JobID aa6b3b19692ae80833dded530f033e77
+Program execution finished
+Job with JobID aa6b3b19692ae80833dded530f033e77 has finished.
+Job Runtime: 369277 ms
+
+
+STDERR:
+ 
+
+-------
+
+Experiment #58/86
+Configuration: {'benchmark.operator': 'Optimized', 'data_generator.synthetic_field_count': 20, 'query_generator.aggregations': ['min', 'max', 'count', 'sum', 'avg_shared']}
+Configuration file: /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761063576760.yml
+
+Running command: /sc/home/magnus.menger/repos/mt-flink-1-20/flink-1.20.2/bin/flink run /sc/home/magnus.menger/repos/mt-flink-1-20/target/mt-flink-1-20-1.0-SNAPSHOT-fat.jar /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761063576760.yml
+STDOUT:
+ Job has been submitted with JobID 1e8797591cdaf2fe77686517cf426f31
+Program execution finished
+Job with JobID 1e8797591cdaf2fe77686517cf426f31 has finished.
+Job Runtime: 350243 ms
+
+
+STDERR:
+ 
+
+-------
+
+Experiment #59/86
+Configuration: {'benchmark.operator': 'Baseline', 'data_generator.synthetic_field_count': 50}
+Configuration file: /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761063932059.yml
+
+Running command: /sc/home/magnus.menger/repos/mt-flink-1-20/flink-1.20.2/bin/flink run /sc/home/magnus.menger/repos/mt-flink-1-20/target/mt-flink-1-20-1.0-SNAPSHOT-fat.jar /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761063932059.yml
+STDOUT:
+ Job has been submitted with JobID 8d8461e61aa55df5cbd137143077975c
+Program execution finished
+Job with JobID 8d8461e61aa55df5cbd137143077975c has finished.
+Job Runtime: 418259 ms
+
+
+STDERR:
+ 
+
+-------
+
+Experiment #60/86
+Configuration: {'benchmark.operator': 'AStream', 'data_generator.synthetic_field_count': 50}
+Configuration file: /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761064355380.yml
+
+Running command: /sc/home/magnus.menger/repos/mt-flink-1-20/flink-1.20.2/bin/flink run /sc/home/magnus.menger/repos/mt-flink-1-20/target/mt-flink-1-20-1.0-SNAPSHOT-fat.jar /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761064355380.yml
+STDOUT:
+ Job has been submitted with JobID 6e8dc03bb94fe3776c74285feae7aa73
+Program execution finished
+Job with JobID 6e8dc03bb94fe3776c74285feae7aa73 has finished.
+Job Runtime: 458597 ms
+
+
+STDERR:
+ 
+
+-------
+
+Experiment #61/86
+Configuration: {'benchmark.operator': 'Optimized', 'data_generator.synthetic_field_count': 50, 'query_generator.aggregations': ['min', 'max', 'count', 'sum', 'avg_shared']}
+Configuration file: /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761064818973.yml
+
+Running command: /sc/home/magnus.menger/repos/mt-flink-1-20/flink-1.20.2/bin/flink run /sc/home/magnus.menger/repos/mt-flink-1-20/target/mt-flink-1-20-1.0-SNAPSHOT-fat.jar /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761064818973.yml
+STDOUT:
+ Job has been submitted with JobID ba5efb4e2461e1d011a607e363784833
+Program execution finished
+Job with JobID ba5efb4e2461e1d011a607e363784833 has finished.
+Job Runtime: 418163 ms
+
+
+STDERR:
+ 
+
+-------
+
+Experiment #62/86
+Configuration: {'benchmark.operator': 'Baseline', 'benchmark.parallelism': 2}
+Configuration file: /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761065242518.yml
+
+Running command: /sc/home/magnus.menger/repos/mt-flink-1-20/flink-1.20.2/bin/flink run /sc/home/magnus.menger/repos/mt-flink-1-20/target/mt-flink-1-20-1.0-SNAPSHOT-fat.jar /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761065242518.yml
+STDOUT:
+ Job has been submitted with JobID a5f8892fd105f26d4676b9a82a69480c
+Program execution finished
+Job with JobID a5f8892fd105f26d4676b9a82a69480c has finished.
+Job Runtime: 388126 ms
+
+
+STDERR:
+ 
+
+-------
+
+Experiment #63/86
+Configuration: {'benchmark.operator': 'AStream', 'benchmark.parallelism': 2}
+Configuration file: /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761065636093.yml
+
+Running command: /sc/home/magnus.menger/repos/mt-flink-1-20/flink-1.20.2/bin/flink run /sc/home/magnus.menger/repos/mt-flink-1-20/target/mt-flink-1-20-1.0-SNAPSHOT-fat.jar /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761065636093.yml
+STDOUT:
+ Job has been submitted with JobID ce28a9d6374eafb1bd564c91be8a763e
+Program execution finished
+Job with JobID ce28a9d6374eafb1bd564c91be8a763e has finished.
+Job Runtime: 333617 ms
+
+
+STDERR:
+ 
+
+-------
+
+Experiment #64/86
+Configuration: {'benchmark.operator': 'Optimized', 'benchmark.parallelism': 2, 'query_generator.aggregations': ['min', 'max', 'count', 'sum', 'avg_shared']}
+Configuration file: /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761065975369.yml
+
+Running command: /sc/home/magnus.menger/repos/mt-flink-1-20/flink-1.20.2/bin/flink run /sc/home/magnus.menger/repos/mt-flink-1-20/target/mt-flink-1-20-1.0-SNAPSHOT-fat.jar /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761065975369.yml
+STDOUT:
+ Job has been submitted with JobID bf8712d6ac1fdfb21760b78654a0e601
+Program execution finished
+Job with JobID bf8712d6ac1fdfb21760b78654a0e601 has finished.
+Job Runtime: 334446 ms
+
+
+STDERR:
+ 
+
+-------
+
+Experiment #65/86
+Configuration: {'benchmark.operator': 'Baseline', 'benchmark.parallelism': 4}
+Configuration file: /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761066314534.yml
+
+Running command: /sc/home/magnus.menger/repos/mt-flink-1-20/flink-1.20.2/bin/flink run /sc/home/magnus.menger/repos/mt-flink-1-20/target/mt-flink-1-20-1.0-SNAPSHOT-fat.jar /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761066314534.yml
+STDOUT:
+ Job has been submitted with JobID e52cbe087524515b02a94c78ed5849ca
+Program execution finished
+Job with JobID e52cbe087524515b02a94c78ed5849ca has finished.
+Job Runtime: 430665 ms
+
+
+STDERR:
+ 
+
+-------
+
+Experiment #66/86
+Configuration: {'benchmark.operator': 'AStream', 'benchmark.parallelism': 4}
+Configuration file: /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761066749840.yml
+
+Running command: /sc/home/magnus.menger/repos/mt-flink-1-20/flink-1.20.2/bin/flink run /sc/home/magnus.menger/repos/mt-flink-1-20/target/mt-flink-1-20-1.0-SNAPSHOT-fat.jar /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761066749840.yml
+STDOUT:
+ Job has been submitted with JobID 0132900c44ed07c3061037f654958600
+Program execution finished
+Job with JobID 0132900c44ed07c3061037f654958600 has finished.
+Job Runtime: 347113 ms
+
+
+STDERR:
+ 
+
+-------
+
+Experiment #67/86
+Configuration: {'benchmark.operator': 'Optimized', 'benchmark.parallelism': 4, 'query_generator.aggregations': ['min', 'max', 'count', 'sum', 'avg_shared']}
+Configuration file: /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761067101026.yml
+
+Running command: /sc/home/magnus.menger/repos/mt-flink-1-20/flink-1.20.2/bin/flink run /sc/home/magnus.menger/repos/mt-flink-1-20/target/mt-flink-1-20-1.0-SNAPSHOT-fat.jar /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761067101026.yml
+STDOUT:
+ Job has been submitted with JobID 2f4148e25b024506ea73a04a7f051940
+Program execution finished
+Job with JobID 2f4148e25b024506ea73a04a7f051940 has finished.
+Job Runtime: 411145 ms
+
+
+STDERR:
+ 
+
+-------
+
+Experiment #68/86
+Configuration: {'benchmark.operator': 'Baseline', 'benchmark.parallelism': 8}
+Configuration file: /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761067516147.yml
+
+Running command: /sc/home/magnus.menger/repos/mt-flink-1-20/flink-1.20.2/bin/flink run /sc/home/magnus.menger/repos/mt-flink-1-20/target/mt-flink-1-20-1.0-SNAPSHOT-fat.jar /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761067516147.yml
+STDOUT:
+ Job has been submitted with JobID a808994da06ab9e4a04316809c0b44d0
+Program execution finished
+Job with JobID a808994da06ab9e4a04316809c0b44d0 has finished.
+Job Runtime: 425208 ms
+
+
+STDERR:
+ 
+
+-------
+
+Experiment #69/86
+Configuration: {'benchmark.operator': 'AStream', 'benchmark.parallelism': 8}
+Configuration file: /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761067945318.yml
+
+Running command: /sc/home/magnus.menger/repos/mt-flink-1-20/flink-1.20.2/bin/flink run /sc/home/magnus.menger/repos/mt-flink-1-20/target/mt-flink-1-20-1.0-SNAPSHOT-fat.jar /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761067945318.yml
+STDOUT:
+ Job has been submitted with JobID 893386c548ad26d37d78ab27adc8f7bf
+Program execution finished
+Job with JobID 893386c548ad26d37d78ab27adc8f7bf has finished.
+Job Runtime: 328894 ms
+
+
+STDERR:
+ 
+
+-------
+
+Experiment #70/86
+Configuration: {'benchmark.operator': 'Optimized', 'benchmark.parallelism': 8, 'query_generator.aggregations': ['min', 'max', 'count', 'sum', 'avg_shared']}
+Configuration file: /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761068278382.yml
+
+Running command: /sc/home/magnus.menger/repos/mt-flink-1-20/flink-1.20.2/bin/flink run /sc/home/magnus.menger/repos/mt-flink-1-20/target/mt-flink-1-20-1.0-SNAPSHOT-fat.jar /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761068278382.yml
+STDOUT:
+ Job has been submitted with JobID 56c582d1775f3113e0091c1b07049b8d
+Program execution finished
+Job with JobID 56c582d1775f3113e0091c1b07049b8d has finished.
+Job Runtime: 419805 ms
+
+
+STDERR:
+ 
+
+-------
+
+Experiment #71/86
+Configuration: {'data_generator.data_source': 'Debs2013', 'benchmark.operator': 'Baseline', 'query_generator.max_parallelism': 1, 'query_generator.ending_per_batch': 0}
+Configuration file: /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761068703597.yml
+
+Running command: /sc/home/magnus.menger/repos/mt-flink-1-20/flink-1.20.2/bin/flink run /sc/home/magnus.menger/repos/mt-flink-1-20/target/mt-flink-1-20-1.0-SNAPSHOT-fat.jar /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761068703597.yml
+STDOUT:
+ Job has been submitted with JobID 0211ebf6afeb680ec97e69be904b8923
+Program execution finished
+Job with JobID 0211ebf6afeb680ec97e69be904b8923 has finished.
+Job Runtime: 357965 ms
+
+
+STDERR:
+ 
+
+-------
+
+Experiment #72/86
+Configuration: {'data_generator.data_source': 'Debs2013', 'benchmark.operator': 'AStream', 'query_generator.max_parallelism': 1, 'query_generator.ending_per_batch': 0}
+Configuration file: /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761069066797.yml
+
+Running command: /sc/home/magnus.menger/repos/mt-flink-1-20/flink-1.20.2/bin/flink run /sc/home/magnus.menger/repos/mt-flink-1-20/target/mt-flink-1-20-1.0-SNAPSHOT-fat.jar /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761069066797.yml
+STDOUT:
+ Job has been submitted with JobID 983ba08d2136cfdce6441b85667b5962
+Program execution finished
+Job with JobID 983ba08d2136cfdce6441b85667b5962 has finished.
+Job Runtime: 396013 ms
+
+
+STDERR:
+ 
+
+-------
+
+Experiment #73/86
+Configuration: {'data_generator.data_source': 'Debs2013', 'benchmark.operator': 'Optimized', 'query_generator.max_parallelism': 1, 'query_generator.ending_per_batch': 0, 'query_generator.aggregations': ['min', 'max', 'count', 'sum', 'avg_shared']}
+Configuration file: /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761069467908.yml
+
+Running command: /sc/home/magnus.menger/repos/mt-flink-1-20/flink-1.20.2/bin/flink run /sc/home/magnus.menger/repos/mt-flink-1-20/target/mt-flink-1-20-1.0-SNAPSHOT-fat.jar /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761069467908.yml
+STDOUT:
+ Job has been submitted with JobID 58df6854c38756e9eb392ad9023a35b6
+Program execution finished
+Job with JobID 58df6854c38756e9eb392ad9023a35b6 has finished.
+Job Runtime: 337399 ms
+
+
+STDERR:
+ 
+
+-------
+
+Experiment #74/86
+Configuration: {'data_generator.data_source': 'Debs2013', 'benchmark.operator': 'Baseline', 'query_generator.max_parallelism': 50, 'query_generator.ending_per_batch': 5}
+Configuration file: /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761069809191.yml
+
+Running command: /sc/home/magnus.menger/repos/mt-flink-1-20/flink-1.20.2/bin/flink run /sc/home/magnus.menger/repos/mt-flink-1-20/target/mt-flink-1-20-1.0-SNAPSHOT-fat.jar /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761069809191.yml
+STDOUT:
+ Job has been submitted with JobID 5020352492138f00c85d3aadb61d94f4
+Program execution finished
+Job with JobID 5020352492138f00c85d3aadb61d94f4 has finished.
+Job Runtime: 442661 ms
+
+
+STDERR:
+ 
+
+-------
+
+Experiment #75/86
+Configuration: {'data_generator.data_source': 'Debs2013', 'benchmark.operator': 'AStream', 'query_generator.max_parallelism': 50, 'query_generator.ending_per_batch': 5}
+Configuration file: /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761070256618.yml
+
+Running command: /sc/home/magnus.menger/repos/mt-flink-1-20/flink-1.20.2/bin/flink run /sc/home/magnus.menger/repos/mt-flink-1-20/target/mt-flink-1-20-1.0-SNAPSHOT-fat.jar /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761070256618.yml
+STDOUT:
+ Job has been submitted with JobID 3490b02b2ca0ee1e839b574035bca66d
+Program execution finished
+Job with JobID 3490b02b2ca0ee1e839b574035bca66d has finished.
+Job Runtime: 337761 ms
+
+
+STDERR:
+ 
+
+-------
+
+Experiment #76/86
+Configuration: {'data_generator.data_source': 'Debs2013', 'benchmark.operator': 'Optimized', 'query_generator.max_parallelism': 50, 'query_generator.ending_per_batch': 5, 'query_generator.aggregations': ['min', 'max', 'count', 'sum', 'avg_shared']}
+Configuration file: /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761070599774.yml
+
+Running command: /sc/home/magnus.menger/repos/mt-flink-1-20/flink-1.20.2/bin/flink run /sc/home/magnus.menger/repos/mt-flink-1-20/target/mt-flink-1-20-1.0-SNAPSHOT-fat.jar /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761070599774.yml
+STDOUT:
+ Job has been submitted with JobID c2b2090809b46eaebfec3fa98f294748
+Program execution finished
+Job with JobID c2b2090809b46eaebfec3fa98f294748 has finished.
+Job Runtime: 354659 ms
+
+
+STDERR:
+ 
+
+-------
+
+Experiment #77/86
+Configuration: {'data_generator.data_source': 'Debs2013', 'benchmark.operator': 'Baseline', 'query_generator.max_parallelism': 200, 'query_generator.ending_per_batch': 20}
+Configuration file: /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761070959073.yml
+
+Running command: /sc/home/magnus.menger/repos/mt-flink-1-20/flink-1.20.2/bin/flink run /sc/home/magnus.menger/repos/mt-flink-1-20/target/mt-flink-1-20-1.0-SNAPSHOT-fat.jar /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761070959073.yml
+STDOUT:
+ Job has been submitted with JobID f55eb83fae6934d5a3e86442ff8996b9
+Program execution finished
+Job with JobID f55eb83fae6934d5a3e86442ff8996b9 has finished.
+Job Runtime: 466678 ms
+
+
+STDERR:
+ 
+
+-------
+
+Experiment #78/86
+Configuration: {'data_generator.data_source': 'Debs2013', 'benchmark.operator': 'AStream', 'query_generator.max_parallelism': 200, 'query_generator.ending_per_batch': 20}
+Configuration file: /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761071430738.yml
+
+Running command: /sc/home/magnus.menger/repos/mt-flink-1-20/flink-1.20.2/bin/flink run /sc/home/magnus.menger/repos/mt-flink-1-20/target/mt-flink-1-20-1.0-SNAPSHOT-fat.jar /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761071430738.yml
+STDOUT:
+ Job has been submitted with JobID eff731414f7769f42c032bc5c0bf6d42
+Program execution finished
+Job with JobID eff731414f7769f42c032bc5c0bf6d42 has finished.
+Job Runtime: 372099 ms
+
+
+STDERR:
+ 
+
+-------
+
+Experiment #79/86
+Configuration: {'data_generator.data_source': 'Debs2013', 'benchmark.operator': 'Optimized', 'query_generator.max_parallelism': 200, 'query_generator.ending_per_batch': 20, 'query_generator.aggregations': ['min', 'max', 'count', 'sum', 'avg_shared']}
+Configuration file: /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761071808233.yml
+
+Running command: /sc/home/magnus.menger/repos/mt-flink-1-20/flink-1.20.2/bin/flink run /sc/home/magnus.menger/repos/mt-flink-1-20/target/mt-flink-1-20-1.0-SNAPSHOT-fat.jar /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761071808233.yml
+STDOUT:
+ Job has been submitted with JobID 9efbbd106fee4092b068aaedfc439adf
+Program execution finished
+Job with JobID 9efbbd106fee4092b068aaedfc439adf has finished.
+Job Runtime: 353572 ms
+
+
+STDERR:
+ 
+
+-------
+
+Experiment #80/86
+Configuration: {'data_generator.data_source': 'Debs2013', 'benchmark.operator': 'Baseline', 'query_generator.max_parallelism': 1000, 'query_generator.ending_per_batch': 100}
+Configuration file: /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761072167455.yml
+
+Running command: /sc/home/magnus.menger/repos/mt-flink-1-20/flink-1.20.2/bin/flink run /sc/home/magnus.menger/repos/mt-flink-1-20/target/mt-flink-1-20-1.0-SNAPSHOT-fat.jar /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761072167455.yml
+STDOUT:
+ Job has been submitted with JobID 3e510d4ef44c6d707c49bf35c6563250
+Program execution finished
+Job with JobID 3e510d4ef44c6d707c49bf35c6563250 has finished.
+Job Runtime: 449814 ms
+
+
+STDERR:
+ 
+
+-------
+
+Experiment #81/86
+Configuration: {'data_generator.data_source': 'Debs2013', 'benchmark.operator': 'AStream', 'query_generator.max_parallelism': 1000, 'query_generator.ending_per_batch': 100}
+Configuration file: /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761072621071.yml
+
+Running command: /sc/home/magnus.menger/repos/mt-flink-1-20/flink-1.20.2/bin/flink run /sc/home/magnus.menger/repos/mt-flink-1-20/target/mt-flink-1-20-1.0-SNAPSHOT-fat.jar /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761072621071.yml
+STDOUT:
+ Job has been submitted with JobID 882bb7e34b3fe47949b5f5a7abf23599
+Program execution finished
+Job with JobID 882bb7e34b3fe47949b5f5a7abf23599 has finished.
+Job Runtime: 403732 ms
+
+
+STDERR:
+ 
+
+-------
+
+Experiment #82/86
+Configuration: {'data_generator.data_source': 'Debs2013', 'benchmark.operator': 'Optimized', 'query_generator.max_parallelism': 1000, 'query_generator.ending_per_batch': 100, 'query_generator.aggregations': ['min', 'max', 'count', 'sum', 'avg_shared']}
+Configuration file: /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761073030483.yml
+
+Running command: /sc/home/magnus.menger/repos/mt-flink-1-20/flink-1.20.2/bin/flink run /sc/home/magnus.menger/repos/mt-flink-1-20/target/mt-flink-1-20-1.0-SNAPSHOT-fat.jar /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761073030483.yml
+STDOUT:
+ Job has been submitted with JobID 748b117dd586f59729a2d86eaaca99a2
+Program execution finished
+Job with JobID 748b117dd586f59729a2d86eaaca99a2 has finished.
+Job Runtime: 420733 ms
+
+
+STDERR:
+ 
+
+-------
+
+Experiment #83/86
+Configuration: {'data_generator.data_source': 'Debs2013', 'benchmark.operator': 'Baseline', 'query_generator.max_parallelism': 5000, 'query_generator.ending_per_batch': 500}
+Configuration file: /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761073455879.yml
+
+Running command: /sc/home/magnus.menger/repos/mt-flink-1-20/flink-1.20.2/bin/flink run /sc/home/magnus.menger/repos/mt-flink-1-20/target/mt-flink-1-20-1.0-SNAPSHOT-fat.jar /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761073455879.yml
+STDOUT:
+ Job has been submitted with JobID 50f0aef5c14e44800ee7f8498b37d341
+Program execution finished
+Job with JobID 50f0aef5c14e44800ee7f8498b37d341 has finished.
+Job Runtime: 435408 ms
+
+
+STDERR:
+ 
+
+-------
+
+Experiment #84/86
+Configuration: {'data_generator.data_source': 'Debs2013', 'benchmark.operator': 'AStream', 'query_generator.max_parallelism': 5000, 'query_generator.ending_per_batch': 500}
+Configuration file: /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761073895411.yml
+
+Running command: /sc/home/magnus.menger/repos/mt-flink-1-20/flink-1.20.2/bin/flink run /sc/home/magnus.menger/repos/mt-flink-1-20/target/mt-flink-1-20-1.0-SNAPSHOT-fat.jar /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761073895411.yml
+STDOUT:
+ Job has been submitted with JobID f12e4c1d506adadecda640adfc20ebf7
+Program execution finished
+Job with JobID f12e4c1d506adadecda640adfc20ebf7 has finished.
+Job Runtime: 461473 ms
+
+
+STDERR:
+ 
+
+-------
+
+Experiment #85/86
+Configuration: {'data_generator.data_source': 'Debs2013', 'benchmark.operator': 'Optimized', 'query_generator.max_parallelism': 5000, 'query_generator.ending_per_batch': 500, 'query_generator.aggregations': ['min', 'max', 'count', 'sum', 'avg_shared']}
+Configuration file: /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761074360854.yml
+
+Running command: /sc/home/magnus.menger/repos/mt-flink-1-20/flink-1.20.2/bin/flink run /sc/home/magnus.menger/repos/mt-flink-1-20/target/mt-flink-1-20-1.0-SNAPSHOT-fat.jar /sc/home/magnus.menger/repos/mt-flink-1-20/out/configs/1761074360854.yml
+STDOUT:
+ Job has been submitted with JobID 8060a708140a7ed1c7e056005ae14393
+Program execution finished
+Job with JobID 8060a708140a7ed1c7e056005ae14393 has finished.
+Job Runtime: 695763 ms
+
+
+STDERR:
+ 
+
+-------
+
+Stopping taskexecutor daemon (pid: 204411) on host cx11.
+Stopping standalonesession daemon (pid: 203862) on host cx11.

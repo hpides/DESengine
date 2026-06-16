@@ -1,0 +1,27 @@
+benchmark:
+  operator: Optimized # possible values: Baseline, AStream, Optimized
+  compress_bitmaps: false
+  max_duration_seconds: 1000
+  duration_without_rate_decrease: 200
+  output_prefix: "10_18_testing_stuff"
+  parallelism: 1
+
+data_generator:
+  data_source: Debs2013 # possible values: Synthetic, Debs2013
+  debs_path: "./data/full-game.csv"
+  synthetic_field_count: 5
+  synthetic_key_count: 25
+
+query_generator:
+  min_window_length_seconds: 1
+  max_window_length_seconds: 5
+  batch_interval: 1
+  starting_per_batch: 20000
+  ending_per_batch: 0
+  max_parallelism: 1
+  different_aggregations: 25
+  different_filters: 10000
+  filter_generation_mode: Random # possible values: Random, EquallySpacedOverlapping
+  overlap_ratio: 0.0
+  aggregations: ["min", "max", "count", "sum", "avg"] # possible values: min, max, count, sum, avg_shared, avg
+

@@ -1,0 +1,25 @@
+benchmark:
+  operator: AStream # possible values: Baseline, AStream, Optimized
+  compress_bitmaps: false
+  duration_seconds: 20
+  output_prefix: "debug-p1-02"
+
+data_generator:
+  csv_path: "./data/full-game.csv"
+  max_tuples_per_second: 2
+  field_count: 11
+  queue_capacity: 50_000
+
+query_generator:
+  used_fields: 11
+  min_window_length_seconds: 1
+  max_window_length_seconds: 10
+  min_field_values: [-23010, -62545, -13675, 0, 0, -9999, -9999, -9999, -9999, -9999, -9999]
+  max_field_values: [64513, 56066, 18215, 65490514, 1327791831, 9999, 9999, 9999, 9999, 9999, 9999]
+  batch_interval: 1
+  starting_per_batch: 20000
+  ending_per_batch: 2
+  max_parallelism: 20
+  different_aggregations: 55
+  different_filters: 10000
+  reuse_sum_and_count_for_avg: true
