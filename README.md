@@ -1,35 +1,36 @@
-# mt-flink
+# Filter-Sliced Aggregation for Ad-hoc Stream Processing
 
-This repository contains the main code for the `mt-flink` project.
+This repository contains the main implementation code for the paper:
 
-The original local project directory was very large, so several files and directories have been removed before uploading this repository. The uploaded version keeps the main code, but excludes large dependencies, datasets, local outputs, and plotting utilities.
+**Filter-Sliced Aggregation for Ad-hoc Stream Processing**
 
+## Paper Abstract
 
+Most stream processing systems focus on long-running queries that are executed independently. In practice, many use cases also involve a large number of short-running ad-hoc queries that are continuously created and stopped by users. To support many parallel queries efficiently, computation and resources should be shared between multiple queries.
 
-## Removed Files and Directories
+This paper introduces **filter slicing**, a technique for sharing partial aggregates between aggregation queries that filter on a numerical column using lower and upper bounds. By combining filter slicing with window slicing and aggregation decomposition, the proposed shared aggregation operator can reuse partial aggregates between queries with different windows, filters, and aggregation functions.
 
-The following files and directories were removed from the original local version before uploading:
+The evaluation shows that the operator achieves similar single-query performance compared to existing approaches and significantly outperforms baselines when multiple queries are active simultaneously, with up to **175× higher throughput**.
+
+## Repository Structure
+
+The main implementation code can be found in:
 
 ```text
-flink-1.20.2/
+mt-flink-1-20-min/src/main/java/org/shared
 ```
 
-This directory contained the Apache Flink version used to run the experiments on the cluster.
+This directory contains the core Flink-based implementation of the shared aggregation operator and related code.
 
-```text
-out/
-```
-
-This directory contained outputs and metrics from previous local runs.
+## Dataset
 
 ```text
 data/full-game.csv
 ```
 
-This file contained the dataset used for the experiments. The dataset can be downloaded separately from:
+The dataset can be downloaded separately from:
 
 ```text
 http://www2.iis.fraunhofer.de/sports-analytics/full-game.gz
 ```
 
-The raw outputs from the cluster experiments were also removed.
